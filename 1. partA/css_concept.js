@@ -174,7 +174,7 @@ document.getElementById('markReadBtn').addEventListener('click', function() {
     } catch (e) { }
 
     setTimeout(() => {
-    window.location.href = '../index.html#before-code';
+    window.location.href = '../../index.html#before-code';
     }, 1500);
 });
 
@@ -232,3 +232,4 @@ document.addEventListener('DOMContentLoaded', function() {
 // Start auto demo after page loads (but disable it for now to avoid conflicts)
 
 // setTimeout(autoDemo, 3000);
+
