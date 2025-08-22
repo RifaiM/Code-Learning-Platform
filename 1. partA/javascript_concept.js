@@ -223,7 +223,7 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(() => {
                 celebration.remove();
                 // Redirect back to main page
-                window.location.href = 'index.html#footer';
+                window.location.href = '../index.html#footer';
             }, 2000);
         });
     }
@@ -252,4 +252,5 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.demo-btn').forEach(btn => {
         btn.addEventListener('click', () => addSparkle(btn));
     });
+
 });
