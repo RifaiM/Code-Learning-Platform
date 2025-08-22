@@ -87,7 +87,7 @@ document.getElementById('markReadBtn').addEventListener('click', function() {
     } catch (e) { }
 
     setTimeout(() => {
-    window.location.href = 'index.html#before-code';
+    window.location.href = '../index.html#before-code';
     }, 1500);
 });
 
@@ -159,5 +159,6 @@ const codeObserver = new IntersectionObserver((entries) => {
     }
     });
 }, { threshold: 0.5 });
+
 
 codeObserver.observe(document.querySelector('.code-demo'));
