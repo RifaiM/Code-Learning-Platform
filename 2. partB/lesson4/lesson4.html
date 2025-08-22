@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 4 - Lists & Navigation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lesson4.css">
+</head>
+<body>
+    <a href="../../1. partA/index.html" class="home-button" title="Back to PartA">🏠</a>
+    <header class="lesson-header">
+        <h1>Lesson 4: Lists & Navigation</h1>
+    </header>
+
+    <main class="lesson-content">
+        <section class="intro">
+            <h2>Introduction</h2>
+            <p>Lists help organize information in a structured way, while navigation elements guide users through your website. 
+               HTML provides different types of lists and semantic elements for creating clear, accessible navigation.</p>
+            
+            <h3>Types of Lists</h3>
+            <div class="list-types">
+                <div class="list-example">
+                    <h4>📋 Unordered List (&lt;ul&gt;)</h4>
+                    <p>For items without a specific order:</p>
+                    <pre>&lt;ul&gt;
+  &lt;li&gt;Apples&lt;/li&gt;
+  &lt;li&gt;Bananas&lt;/li&gt;
+  &lt;li&gt;Oranges&lt;/li&gt;
+&lt;/ul&gt;</pre>
+                </div>
+                
+                <div class="list-example">
+                    <h4>🔢 Ordered List (&lt;ol&gt;)</h4>
+                    <p>For items with a specific sequence:</p>
+                    <pre>&lt;ol&gt;
+  &lt;li&gt;Open the app&lt;/li&gt;
+  &lt;li&gt;Sign in&lt;/li&gt;
+  &lt;li&gt;Start coding&lt;/li&gt;
+&lt;/ol&gt;</pre>
+                </div>
+            </div>
+
+            <h3>Navigation Element</h3>
+            <p>The <code>&lt;nav&gt;</code> element is used to wrap navigation links, making your website more semantic and accessible:</p>
+            <pre>&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</pre>
+        </section>
+
+        <section class="quicklook-understanding">
+            <h2>Lists & Navigation — Quick Look</h2>
+            <p>See how different list types and navigation work together:</p>
+            <div class="editor-task-container">
+                <div class="editor-box">
+                    <div class="editor-label">HTML Code</div>
+                    <textarea disabled id="example">&lt;h2&gt;My Favorite Foods&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Pizza&lt;/li&gt;
+  &lt;li&gt;Pasta&lt;/li&gt;
+  &lt;li&gt;Ice Cream&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;How to Make Coffee&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Boil water&lt;/li&gt;
+  &lt;li&gt;Add coffee grounds&lt;/li&gt;
+  &lt;li&gt;Pour and enjoy&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#menu"&gt;Menu&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</textarea>
+                </div>
+                <div class="result-container">
+                    <div class="result-header">Result</div>
+                    <iframe class="preview-frame" src="lesson4_preview.html"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="understanding">
+            <h2>Understanding List Structure</h2>
+            <p>Lists must follow a specific structure for proper HTML:</p>
+            <div class="icons">
+                <div class="icon">
+                    <span class="em">🏗️</span>
+                    <strong>Container Element</strong><br>
+                    <code>&lt;ul&gt;</code> or <code>&lt;ol&gt;</code> wraps all items
+                </div>
+                <div class="icon">
+                    <span class="em">📄</span>
+                    <strong>List Items</strong><br>
+                    Each <code>&lt;li&gt;</code> contains one item
+                </div>
+                <div class="icon">
+                    <span class="em">🧭</span>
+                    <strong>Navigation</strong><br>
+                    <code>&lt;nav&gt;</code> element for semantic meaning
+                </div>
+            </div>
+            
+            <div class="structure-visual">
+                <h4>✅ Correct Structure:</h4>
+                <pre class="correct">&lt;ul&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;</pre>
+                
+                <h4>❌ Incorrect Structure:</h4>
+                <pre class="incorrect">&lt;ul&gt;
+  Item 1
+  Item 2
+&lt;/ul&gt;</pre>
+                <p class="error-note">⚠️ List items must be wrapped in <code>&lt;li&gt;</code> tags!</p>
+            </div>
+        </section>
+
+        <section class="task">
+            <h2>Your Task</h2>
+            <p>Create a navigation bar with 3 links. Your navigation should include:</p>
+            <ul>
+                <li>A <code>&lt;nav&gt;</code> element to wrap the navigation</li>
+                <li>An unordered list (<code>&lt;ul&gt;</code>) inside the nav</li>
+                <li>Three list items (<code>&lt;li&gt;</code>) with links inside them</li>
+                <li>Each link should go to a different page (you can use # for dummy links)</li>
+            </ul>
+            <p><strong>Validation requirements:</strong> Must contain <code>&lt;nav&gt;</code>, <code>&lt;ul&gt;</code>, and exactly 3 <code>&lt;li&gt;</code> elements.</p>
+            
+            <div class="editor-task-container">
+                <div class="editor-box">
+                    <div class="editor-label">Your Code (editable)</div>
+                    <textarea id="code-editor" placeholder="Write your HTML code here...
+
+Hint: Start with <nav>, then <ul>, then three <li> elements with <a> tags inside."></textarea>
+                </div>
+                <div class="result-container">
+                    <div class="result-header">Result</div>
+                    <iframe id="result-frame"></iframe>
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="check-answer">Check Answer</button>
+                <button id="show-hint">Show Hint</button>
+                <button id="next-lesson" disabled>Next Lesson</button>
+            </div>
+            <div id="feedback"></div>
+        </section>
+    </main>
+
+    <script src="lesson4.js"></script>
+    <script src="../lesson-navigation.js"></script>
+</body>
+</html>

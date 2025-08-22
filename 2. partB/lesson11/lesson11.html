@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lesson11.css">
+    <title>Lesson 11 - DOM Manipulation</title>
+</head>
+<body>
+    <a href="../../1. partA/index.html" class="home-button" title="Back to PartA">🏠</a>
+    <header class="lesson-header">
+        <h1>Lesson 11: DOM Manipulation</h1>
+    </header>
+
+    <main class="lesson-content">
+        <section class="intro">
+            <h2>Introduction</h2>
+            <p>DOM Manipulation is the process of dynamically changing the content, structure, and styling of web pages using JavaScript. The DOM (Document Object Model) represents your HTML as a tree structure that JavaScript can interact with and modify in real-time.</p>
+            
+            <h3>Core DOM Manipulation Concepts</h3>
+            <div class="dom-diagram">
+                <div class="dom-demo">
+                    <div class="demo-container">
+                        <div class="dom-concept selection">
+                            <div class="concept-label">Element Selection</div>
+                            <span class="concept-desc">Find HTML elements to work with</span>
+                        </div>
+                        <div class="dom-concept modification">
+                            <div class="concept-label">Content Modification</div>
+                            <span class="concept-desc">Change text and HTML content</span>
+                        </div>
+                        <div class="dom-concept interaction">
+                            <div class="concept-label">User Interaction</div>
+                            <span class="concept-desc">Respond to clicks and events</span>
+                        </div>
+                        <div class="dom-concept dynamic">
+                            <div class="concept-label">Dynamic Updates</div>
+                            <span class="concept-desc">Real-time page changes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>DOM Manipulation Fundamentals</h3>
+            <div class="dom-components">
+                <div class="component">
+                    <h4>🎯 Element Selection</h4>
+                    <p>Find specific HTML elements to work with</p>
+                    <code>document.getElementById("myElement")</code>
+                </div>
+                
+                <div class="component">
+                    <h4>📝 Content Modification</h4>
+                    <p>Change the text or HTML content of elements</p>
+                    <code>element.innerHTML = "New Content"</code>
+                </div>
+
+                <div class="component">
+                    <h4>🖱️ Interactive Events</h4>
+                    <p>Respond to user actions like clicks</p>
+                    <code>button.onclick = function() { ... }</code>
+                </div>
+
+                <div class="component">
+                    <h4>⚡ Real-time Updates</h4>
+                    <p>Instantly change page content without refresh</p>
+                    <code>element.style.color = "blue"</code>
+                </div>
+            </div>
+        </section>
+
+        <section class="understanding">
+            <h2>Understanding DOM Manipulation</h2>
+            <p>Learn how to dynamically control and modify web page content using JavaScript:</p>
+            
+            <h3>DOM Manipulation Concepts Explained</h3>
+            <div class="dom-explanations">
+                <div class="dom-explanation">
+                    <h4>🎯 Element Selection with getElementById</h4>
+                    <div class="explanation-content">
+                        <div class="explanation-text">
+                            <p><code>document.getElementById()</code> finds and returns a specific HTML element by its unique ID attribute.</p>
+                            <pre>// HTML: &lt;h1 id="title"&gt;Welcome&lt;/h1&gt;
+// JavaScript: Select the element
+let titleElement = document.getElementById("title");
+console.log(titleElement); // Shows the h1 element</pre>
+                        </div>
+                        <div class="visual-demo selection-demo">
+                            <div class="html-structure">
+                                <div class="html-element">
+                                    <span class="tag">&lt;h1 id="title"&gt;</span>
+                                    <span class="content">Welcome</span>
+                                    <span class="tag">&lt;/h1&gt;</span>
+                                </div>
+                                <div class="selection-arrow">↓</div>
+                                <div class="js-selection">
+                                    <span class="js-code">getElementById("title")</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dom-explanation">
+                    <h4>📝 Content Modification with innerHTML</h4>
+                    <div class="explanation-content">
+                        <div class="explanation-text">
+                            <p><code>innerHTML</code> property allows you to get or set the HTML content inside an element.</p>
+                            <pre>// Get current content
+let currentText = titleElement.innerHTML;
+
+// Set new content
+titleElement.innerHTML = "Hello World!";
+titleElement.innerHTML = "&lt;strong&gt;Bold Text&lt;/strong&gt;";</pre>
+                        </div>
+                        <div class="visual-demo content-demo">
+                            <div class="content-change">
+                                <div class="before-state">
+                                    <span class="state-label">Before:</span>
+                                    <div class="demo-element">Welcome</div>
+                                </div>
+                                <div class="change-arrow">→</div>
+                                <div class="after-state">
+                                    <span class="state-label">After:</span>
+                                    <div class="demo-element changed">Hello World!</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dom-explanation">
+                    <h4>🖱️ Interactive Button Events</h4>
+                    <div class="explanation-content">
+                        <div class="explanation-text">
+                            <p>Connect JavaScript functions to button clicks to create interactive experiences.</p>
+                            <pre>// HTML: &lt;button id="changeBtn"&gt;Click Me&lt;/button&gt;
+// JavaScript: Add click behavior
+let button = document.getElementById("changeBtn");
+button.onclick = function() {
+    alert("Button clicked!");
+};</pre>
+                        </div>
+                        <div class="visual-demo interaction-demo">
+                            <div class="interaction-flow">
+                                <div class="demo-button">
+                                    <span class="button-text">Click Me</span>
+                                </div>
+                                <div class="click-indicator">👆 Click</div>
+                                <div class="result-indicator">
+                                    <span class="result-text">Function Executes!</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dom-explanation">
+                    <h4>⚡ Real-time Page Updates</h4>
+                    <div class="explanation-content">
+                        <div class="explanation-text">
+                            <p>DOM manipulation happens instantly without page refresh, creating smooth user experiences.</p>
+                            <pre>// Dynamic content updates
+function updateContent() {
+    let element = document.getElementById("dynamic");
+    element.innerHTML = "Updated at " + new Date();
+    element.style.color = "blue";
+}</pre>
+                        </div>
+                        <div class="visual-demo dynamic-demo">
+                            <div class="timeline">
+                                <div class="time-step">
+                                    <span class="time-label">T=0</span>
+                                    <div class="demo-state">Original Content</div>
+                                </div>
+                                <div class="time-step">
+                                    <span class="time-label">T=1</span>
+                                    <div class="demo-state updated">New Content</div>
+                                </div>
+                                <div class="instant-label">Instant Update!</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Common Use Cases</h3>
+            <div class="use-cases">
+                <div class="use-case">
+                    <div class="use-case-icon">🔄</div>
+                    <div class="use-case-content">
+                        <h4>Dynamic Content</h4>
+                        <p>Update text, images, and HTML content based on user actions or data changes.</p>
+                    </div>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-icon">🎮</div>
+                    <div class="use-case-content">
+                        <h4>Interactive Games</h4>
+                        <p>Create games that respond to clicks, update scores, and change game states.</p>
+                    </div>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-icon">📊</div>
+                    <div class="use-case-content">
+                        <h4>Live Dashboards</h4>
+                        <p>Display real-time data updates without refreshing the entire page.</p>
+                    </div>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-icon">💬</div>
+                    <div class="use-case-content">
+                        <h4>User Feedback</h4>
+                        <p>Show success messages, error alerts, and form validation instantly.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="structure-visual">
+                <h4>✅ Good DOM Manipulation Practice:</h4>
+                <pre class="correct">// Clear structure and meaningful IDs
+&lt;h1 id="welcomeTitle"&gt;Welcome&lt;/h1&gt;
+&lt;button id="changeTextBtn"&gt;Change Text&lt;/button&gt;
+
+// JavaScript with descriptive names
+let titleElement = document.getElementById("welcomeTitle");
+let changeButton = document.getElementById("changeTextBtn");
+
+changeButton.onclick = function() {
+    titleElement.innerHTML = "Hello, World!";
+    console.log("Title updated successfully");
+};</pre>
+                
+                <h4>❌ Poor DOM Manipulation Practice:</h4>
+                <pre class="incorrect">// Unclear IDs and no structure
+&lt;h1 id="h"&gt;Welcome&lt;/h1&gt;
+&lt;button id="b"&gt;Click&lt;/button&gt;
+
+// JavaScript with unclear names
+let x = document.getElementById("h");
+let y = document.getElementById("b");
+
+y.onclick = function() {
+    x.innerHTML = "Changed";
+};</pre>
+                <p class="error-note">⚠️ Always use descriptive IDs and meaningful variable names for better code readability!</p>
+            </div>
+        </section>
+
+        <section class="task">
+            <h2>Your Task</h2>
+            <p>Create an interactive webpage that demonstrates DOM manipulation. Your code should include:</p>
+            <ul>
+                <li><strong>HTML structure</strong> with at least one heading and one button</li>
+                <li><strong>Unique ID attributes</strong> for elements you want to manipulate</li>
+                <li><strong>JavaScript that uses getElementById</strong> to select elements</li>
+                <li><strong>Button click functionality</strong> that changes the heading text</li>
+                <li><strong>innerHTML property</strong> to modify content</li>
+                <li>The button should change the heading text when clicked</li>
+            </ul>
+            <p><strong>Validation requirements:</strong> Must use <code>getElementById</code>, <code>innerHTML</code>, and button click functionality.</p>
+            
+            <div class="editor-task-container">
+                <div class="editor-box">
+                    <div class="editor-label">Your HTML & JavaScript Code (editable)</div>
+                    <textarea id="code-editor" 
+                    placeholder="Hint: Create an <h1> and a <button> with unique IDs. 
+Use JavaScript getElementById() and innerHTML to change the heading text when the button is clicked.
+
+Example structure:
+
+<html>
+<head>
+    <title>DOM Manipulation</title>
+</head>
+<body>
+    <h1 id='title'>Original Title</h1>
+    <button id='changeBtn'>Change Title</button>
+
+    <script>
+    let titleElement = document.getElementById('title');
+    let button = document.getElementById('changeBtn');
+
+    button.onclick = function() {
+        titleElement.innerHTML = 'New Title!';
+    };
+    </script>
+</body>
+</html>"></textarea>
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="check-answer">Check Answer</button>
+                <button id="show-hint">Show Hint</button>
+                <button id="next-lesson" disabled>Next Lesson</button>
+            </div>
+            <div id="feedback"></div>
+        </section>
+    </main>
+
+    <script src="lesson11.js"></script>
+    <script src="../lesson-navigation.js"></script>
+</body>
+</html>

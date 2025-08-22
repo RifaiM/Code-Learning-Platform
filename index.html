@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <title>Journey Through Web History</title>
+</head>
+<body>
+  <header>
+    <h1>🌐 Journey Through Web History</h1>
+    <p>Discover how the web evolved from simple documents to interactive experiences</p>
+  </header>
+
+  <div class="container">
+    <!-- Timeline Section -->
+    <section class="section timeline-section">
+      <h2 style="color: #333;"><span class="emoji">⏰</span>Evolution of Web Browsers</h2>
+      <p>Travel through time and see how web browsers shaped our digital world. Each browser brought revolutionary features that changed how we experience the internet.</p>
+      
+      <div class="timeline-controls">
+        <button class="timeline-btn" id="prevBtn">← Previous Era</button>
+        <button class="timeline-btn" id="nextBtn">Next Era →</button>
+      </div>
+      
+      <div class="timeline-container" id="timelineContainer">
+        <!-- Browser timeline cards will be inserted here -->
+      </div>
+    </section>
+
+    <!-- Interactive Quiz -->
+    <section class="quiz-container">
+      <h2><span class="emoji">🧠</span>Test Your Knowledge</h2>
+      <div class="quiz-question" id="quizQuestion">
+        Which browser was the first to introduce tabbed browsing as a standard feature?
+      </div>
+      <div class="quiz-options" id="quizOptions">
+        <button class="quiz-option" data-answer="false">Internet Explorer</button>
+        <button class="quiz-option" data-answer="false">Netscape Navigator</button>
+        <button class="quiz-option" data-answer="true">Firefox</button>
+        <button class="quiz-option" data-answer="false">Safari</button>
+      </div>
+      <div class="quiz-feedback" id="quizFeedback"></div>
+      <span class="span-info">*Next question loads after correct answer</span>
+    </section>
+
+    <!-- Learning Progress -->
+    <section class="progress-section" id="progressSection">
+      <h2><span class="emoji">🎯</span>Your Learning Journey</h2>
+      <div class="progress-text">
+        Master the fundamentals before building: <span id="progressCount">0</span>/4 concepts completed
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <p>Understanding these core concepts will make your coding journey smoother and more enjoyable!</p>
+    </section>
+
+    <!-- Concepts Grid -->
+    <section class="section" id="before-code">
+      <h2 style="color: #333;"><span class="emoji">🎓</span>Before You Start Coding</h2>
+      <p>These fundamental concepts are the foundation of every website. Think of them like the ingredients in a recipe — once you understand each one, you’ll be ready to build something amazing.</p>
+      
+      <div class="concepts-grid">
+        <a href="/1. partA/website_concept.html" class="concept-card" data-concept="website">
+          <div class="concept-icon">🌍</div>
+          <h3>What is a Website?</h3>
+          <p>Discover the magic behind websites - how they work, how they're served, and why they've revolutionized communication.</p>
+        </a>
+        
+        <a href="/1. partA/html_concept.html" class="concept-card" data-concept="html">
+          <div class="concept-icon">📝</div>
+          <h3>HTML Structure</h3>
+          <p>The skeleton of every webpage. Learn how HTML creates the foundation that holds all content together.</p>
+        </a>
+        
+        <a href="/1. partA/css_concept.html" class="concept-card" data-concept="css">
+          <div class="concept-icon">🎨</div>
+          <h3>CSS Styling</h3>
+          <p>The artist's palette of the web. Transform plain HTML into beautiful, engaging visual experiences.</p>
+        </a>
+        
+        <a href="/1. partA/javascript_concept.html" class="concept-card" data-concept="javascript">
+          <div class="concept-icon">⚡</div>
+          <h3>JavaScript Interactivity</h3>
+          <p>The brain that makes websites think and respond. Add life to your pages with dynamic interactions.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <footer style="text-align: center; margin: 40px 0;" id="footer">
+      <button id="nextBtnPartB" class="next-btn disabled">
+        🚀 Start Building Your First Website
+      </button>
+      <p style="margin-top: 15px; color: #666;">
+        Complete all concept cards above to unlock the hands-on coding lessons!
+      </p>
+    </footer>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>

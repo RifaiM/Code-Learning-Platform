@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 8 - Flexbox Layout</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lesson8.css">
+</head>
+<body>
+    <a href="../../1. partA/index.html" class="home-button" title="Back to PartA">🏠</a>
+    <header class="lesson-header">
+        <h1>Lesson 8: Flexbox Layout</h1>
+    </header>
+
+    <main class="lesson-content">
+        <section class="intro">
+            <h2>Introduction</h2>
+            <p>CSS Flexbox (Flexible Box Layout) is a powerful layout method that makes it easy to arrange elements in rows or columns. 
+               It provides an efficient way to distribute space and align items, even when their size is unknown or dynamic.</p>
+            
+            <h3>Flexbox Components</h3>
+            <div class="flexbox-diagram">
+                <div class="flex-demo">
+                    <div class="flex-container">
+                        <div class="container-label">Flex Container (display: flex)</div>
+                        <div class="flex-item">
+                            <span class="item-label">Flex Item 1</span>
+                        </div>
+                        <div class="flex-item">
+                            <span class="item-label">Flex Item 2</span>
+                        </div>
+                        <div class="flex-item">
+                            <span class="item-label">Flex Item 3</span>
+                        </div>
+                        <div class="main-axis-label">Main Axis →</div>
+                        <div class="cross-axis-label">Cross Axis ↓</div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Key Flexbox Properties</h3>
+            <div class="flex-components">
+                <div class="component">
+                    <h4>📦 display: flex</h4>
+                    <p>Makes an element a flex container</p>
+                    <code>display: flex;</code>
+                </div>
+                
+                <div class="component">
+                    <h4>↔️ justify-content</h4>
+                    <p>Aligns items along the main axis</p>
+                    <code>justify-content: center;</code>
+                </div>
+
+                <div class="component">
+                    <h4>↕️ align-items</h4>
+                    <p>Aligns items along the cross axis</p>
+                    <code>align-items: center;</code>
+                </div>
+
+                <div class="component">
+                    <h4>🔄 flex-direction</h4>
+                    <p>Sets the main axis direction</p>
+                    <code>flex-direction: row;</code>
+                </div>
+            </div>
+        </section>
+
+        <section class="quicklook-understanding">
+            <h2>Flexbox Layout — Quick Look</h2>
+            <p>See how Flexbox creates responsive, aligned layouts:</p>
+            <div class="editor-task-container">
+                <div class="editor-box">
+                    <div class="editor-label">CSS Flexbox Code</div>
+                    <textarea disabled id="example">.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #007BFF;
+  padding: 15px 20px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.card {
+  flex: 1 1 200px;
+  background: #f8f9ff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+}</textarea>
+                </div>
+                <div class="result-container">
+                    <div class="result-header">Result</div>
+                    <iframe class="preview-frame" src="lesson8_preview.html"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="understanding">
+            <h2>Understanding Flexbox Properties</h2>
+            <p>Master the essential properties for creating flexible layouts:</p>
+            
+            <h3>Justify-Content Options</h3>
+            <div class="property-examples">
+                <div class="property-demo">
+                    <h4>↔️ Main Axis Alignment</h4>
+                    <pre>justify-content: flex-start;    /* Default - start */
+justify-content: flex-end;      /* End */
+justify-content: center;        /* Center */
+justify-content: space-between; /* Space between */
+justify-content: space-around;  /* Space around */
+justify-content: space-evenly;  /* Even spacing */</pre>
+                </div>
+                
+                <div class="property-demo">
+                    <h4>↕️ Cross Axis Alignment</h4>
+                    <pre>align-items: stretch;       /* Default - stretch */
+align-items: flex-start;    /* Start */
+align-items: flex-end;      /* End */
+align-items: center;        /* Center */
+align-items: baseline;      /* Text baseline */</pre>
+                </div>
+            </div>
+
+            <h3>Flexbox Direction Examples</h3>
+            <div class="direction-examples">
+                <div class="direction-demo row-demo">
+                    <strong>flex-direction: row</strong>
+                    <div class="demo-container">
+                        <div class="demo-item">1</div>
+                        <div class="demo-item">2</div>
+                        <div class="demo-item">3</div>
+                    </div>
+                    <code>flex-direction: row;</code>
+                </div>
+                <div class="direction-demo column-demo">
+                    <strong>flex-direction: column</strong>
+                    <div class="demo-container column">
+                        <div class="demo-item">1</div>
+                        <div class="demo-item">2</div>
+                        <div class="demo-item">3</div>
+                    </div>
+                    <code>flex-direction: column;</code>
+                </div>
+                <div class="direction-demo center-demo">
+                    <strong>justify-content: center</strong>
+                    <div class="demo-container center">
+                        <div class="demo-item">1</div>
+                        <div class="demo-item">2</div>
+                        <div class="demo-item">3</div>
+                    </div>
+                    <code>justify-content: center;</code>
+                </div>
+                <div class="direction-demo between-demo">
+                    <strong>space-between</strong>
+                    <div class="demo-container between">
+                        <div class="demo-item">1</div>
+                        <div class="demo-item">2</div>
+                        <div class="demo-item">3</div>
+                    </div>
+                    <code>justify-content: space-between;</code>
+                </div>
+            </div>
+            
+            <div class="icons">
+                <div class="icon">
+                    <span class="em">🎯</span>
+                    <strong>Perfect Alignment</strong><br>
+                    Center items easily without complex calculations
+                </div>
+                <div class="icon">
+                    <span class="em">📱</span>
+                    <strong>Responsive Design</strong><br>
+                    Adapts to different screen sizes automatically
+                </div>
+                <div class="icon">
+                    <span class="em">⚡</span>
+                    <strong>Efficient Layout</strong><br>
+                    Replaces floats and complex positioning
+                </div>
+                <div class="icon">
+                    <span class="em">🔧</span>
+                    <strong>Flexible Control</strong><br>
+                    Fine-tune spacing and distribution
+                </div>
+            </div>
+            
+            <div class="structure-visual">
+                <h4>✅ Good Flexbox Practice:</h4>
+                <pre class="correct">/* Clean, semantic navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}</pre>
+                
+                <h4>❌ Poor Layout Practice:</h4>
+                <pre class="incorrect">/* Complex float-based layout */
+.navbar {
+  overflow: hidden;
+}
+.navbar .logo {
+  float: left;
+}
+.navbar .links {
+  float: right;
+  margin-top: 15px;
+}</pre>
+                <p class="error-note">⚠️ Use Flexbox instead of floats for modern, clean layouts!</p>
+            </div>
+        </section>
+
+        <section class="task">
+            <h2>Your Task</h2>
+            <p>Rebuild the navigation bar from Lesson 4 using Flexbox. Your page should include:</p>
+            <ul>
+                <li><strong>Navigation bar</strong> with <code>display: flex</code></li>
+                <li>Use <code>justify-content</code> to align navigation items</li>
+                <li>Apply <code>align-items</code> for vertical alignment</li>
+                <li>Include at least <strong>3 navigation links</strong></li>
+                <li>Add a logo or site title</li>
+                <li>Use Flexbox for the overall layout structure</li>
+            </ul>
+            <p><strong>Validation requirements:</strong> Must use <code>display: flex</code>, <code>justify-content</code>, and proper navigation structure.</p>
+            
+            <div class="editor-task-container">
+                <div class="editor-box">
+                    <div class="editor-label">Your Code (editable)</div>
+                    <textarea id="code-editor" placeholder="Write your HTML with Flexbox CSS here...
+
+Hint: Create a navigation bar using Flexbox properties.
+
+Example:
+<html>
+<head>
+  <style>
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #007BFF;
+      padding: 15px 20px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <nav class='navbar'>
+    <div class='logo'>My Site</div>
+    <ul class='nav-links'>
+      <li><a href='#'>Home</a></li>
+      <li><a href='#'>About</a></li>
+      <li><a href='#'>Contact</a></li>
+    </ul>
+  </nav>
+</body>
+</html>"></textarea>
+                </div>
+                <div class="result-container">
+                    <div class="result-header">Result</div>
+                    <iframe id="result-frame"></iframe>
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="check-answer">Check Answer</button>
+                <button id="show-hint">Show Hint</button>
+                <button id="next-lesson" disabled>Next Lesson</button>
+            </div>
+            <div id="feedback"></div>
+        </section>
+    </main>
+
+    <script src="lesson8.js"></script>
+    <script src="../lesson-navigation.js"></script>
+</body>
+</html>

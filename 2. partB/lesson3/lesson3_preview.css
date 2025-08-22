@@ -1,0 +1,36 @@
+body {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400; /* normal text */
+  padding: 15px;
+  background: #f9f9f9;
+}
+h1 {
+  color: #007BFF;
+  border-bottom: 2px solid #007BFF;
+  padding-bottom: 5px;
+}
+img {
+  border: 3px solid #28a745;
+  border-radius: 8px;
+  display: block;
+  margin: 10px 0;
+}
+p {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  padding: 10px;
+  border-radius: 6px;
+  margin: 10px 0;
+}
+a {
+  color: #007BFF;
+  text-decoration: underline;
+  font-weight: bold;
+  border: 2px dashed #007BFF;
+  padding: 2px 5px;
+  border-radius: 4px;
+  background: #e3f2fd;
+}
+a:hover {
+  background: #bbdefb;
+}

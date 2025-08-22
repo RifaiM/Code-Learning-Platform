@@ -1,0 +1,147 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400; /* normal text */
+    padding: 20px;
+    background: #f8f9ff;
+    margin: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1 {
+    color: #007BFF;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    border-radius: 10px;
+    border-left: 5px solid #007BFF;
+}
+
+h2 {
+    color: #0056b3;
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+h3 {
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.highlight {
+    background: #fff3cd;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #ffc107;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.highlight h2 {
+    color: #856404;
+    margin-top: 0;
+}
+
+.highlight p {
+    color: #856404;
+}
+
+.button {
+    background: #28a745;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 20px 0;
+    display: inline-block;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.button:hover {
+    background: #218838;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.info-box {
+    background: #e8f4fd;
+    border: 2px solid #007BFF;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    position: relative;
+}
+
+.info-box::before {
+    content: "ℹ️";
+    position: absolute;
+    top: -12px;
+    left: 15px;
+    background: #007BFF;
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.info-box h3 {
+    margin-top: 10px;
+    color: #0056b3;
+}
+
+.info-box ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.info-box li {
+    color: #0056b3;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.info-box li::marker {
+    color: #007BFF;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+        padding: 12px;
+    }
+    
+    .highlight,
+    .info-box {
+        padding: 15px;
+        margin: 15px 0;
+    }
+    
+    .button {
+        width: 100%;
+        text-align: center;
+    }
+}

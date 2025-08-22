@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 2 - HTML Text & Headings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lesson2.css">
+</head>
+<body>
+    <a href="../../1. partA/index.html" class="home-button" title="Back to PartA">🏠</a>
+    <header class="lesson-header">
+        <h1>Lesson 2: HTML Text & Headings</h1>
+    </header>
+
+    <main class="lesson-content">
+        <section class="intro">
+            <h2>Introduction</h2>
+            <p>Headings and paragraphs form the basic building blocks of a web page’s content. 
+               They provide structure and meaning. The <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> tags define headings, 
+               while the <code>&lt;p&gt;</code> tag defines a paragraph.</p>
+        </div>
+</section>
+
+        <div class="side-by-side">
+            
+<section class="quicklook-understanding">
+  <h2>HTML Text — Quick Look & Understanding</h2>
+  <p>Headings (<code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code>) establish a hierarchy, paragraphs (<code>&lt;p&gt;</code>) provide detail, and emphasis tags (<code>&lt;em&gt;</code>, <code>&lt;strong&gt;</code>) highlight key points. Below, see the code example and its rendered result side by side.</p>
+  <div class="editor-task-container">
+    <div class="editor-box">
+      <div class="editor-label">HTML Code</div>
+      <textarea disabled id="example"><h1>Main Heading</h1>
+<h2>Subheading Example</h2>
+<p>This is a simple paragraph explaining HTML text elements.</p>
+<p>You can also use <strong>bold</strong> or <em>emphasis</em> text.</p></textarea>
+    </div>
+    <div class="result-container">
+      <div class="result-header">Result</div>
+      <iframe class="preview-frame" src="lesson2_preview.html"></iframe>
+    </div>
+  </div>
+</section>
+
+        </div>
+
+        <section class="task">
+            <h2>Your Task</h2>
+            <p>Create a page with one main title, one subheading, and one paragraph describing a topic you like.</p>
+<div class="your-task">
+<div class="editor-task-container">
+                <div class="editor-box">
+                    <div class="editor-label">Your Code (editable)</div>
+                    <textarea id="code-editor" placeholder="Write your HTML code here..."></textarea>
+                </div>
+                <div class="result-container">
+                    <div class="result-header">Result</div>
+                    <iframe id="result-frame"></iframe>
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="check-answer">Check Answer</button>
+                <button id="show-hint">Show Hint</button>
+                <button id="next-lesson" disabled>Next Lesson</button>
+            </div>
+            <div id="feedback"></div>
+        </div>
+</section>
+    </main>
+
+    <script src="lesson2.js"></script>
+    <script src="../lesson-navigation.js"></script>
+
+
+
+
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  let taskSection = document.querySelector(".your-task") || document.querySelector("section");
+  if (!taskSection) return;
+
+  const taskTA = taskSection.querySelector("textarea:not([disabled])");
+  const taskFrame = taskSection.querySelector("iframe");
+  const checkBtn = taskSection.querySelector("button.check-answer") || taskSection.querySelector("button#check-answer");
+  const nextBtn = taskSection.querySelector("button.next-lesson") || taskSection.querySelector("button#next-lesson");
+
+  function stripScripts(s) { return s.replace(/<script[\s\S]*?>[\s\S]*?<\/script>/gi, ""); }
+  function updatePreview() {
+    if (!taskTA || !taskFrame) return;
+    const doc = taskFrame.contentDocument || taskFrame.contentWindow.document;
+    doc.open();
+    doc.write(stripScripts(taskTA.value));
+    doc.close();
+  }
+  if (taskTA && taskFrame) {
+    taskTA.addEventListener("input", updatePreview);
+    updatePreview();
+  }
+
+  function hasClosedTag(s, tag) {
+    const re = new RegExp(`<${tag}[^>]*>[\\s\\S]*?<\\/${tag}>`, "i");
+    return re.test(s);
+  }
+  function balanced(s, tag) {
+    const open = (s.match(new RegExp(`<${tag}(\\s|>)`, "gi")) || []).length;
+    const close = (s.match(new RegExp(`</${tag}>`, "gi")) || []).length;
+    return open > 0 && open === close;
+  }
+  function strictValid(code) {
+    const s = code.toLowerCase();
+    return hasClosedTag(s,"h1") && hasClosedTag(s,"h2") && hasClosedTag(s,"p")
+        && balanced(s,"h1") && balanced(s,"h2") && balanced(s,"p");
+  }
+
+  if (nextBtn) {
+    nextBtn.disabled = true;
+    nextBtn.classList.add("is-disabled");
+  }
+
+  if (checkBtn && nextBtn && taskTA) {
+    checkBtn.addEventListener("click", function() {
+      const ok = strictValid(taskTA.value);
+      if (ok) {
+        
+        nextBtn.disabled = false;
+        nextBtn.classList.remove("is-disabled");
+      } else {
+        
+        nextBtn.disabled = true;
+        nextBtn.classList.add("is-disabled");
+      }
+    });
+  }
+});
+</script>
+
+</body>
+</html>

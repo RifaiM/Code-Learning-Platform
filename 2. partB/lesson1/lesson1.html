@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Part B — Lesson 1: HTML Basics &amp; Website Structure
+  </title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="lesson1.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <a href="../../1. partA/index.html" class="home-button" title="Back to PartA">🏠</a>
+  <header>
+   <h1>
+    Lesson 1 — HTML Basics &amp; Website Structure
+   </h1>
+  </header>
+  <main class="container">
+   <!-- Introduction (from lesson1_updated style, adapted to blue theme) -->
+   <section class="card">
+    <h2>
+     Introduction
+    </h2>
+    <p>
+     HTML (HyperText Markup Language) is the standard language for creating webpages. It structures your content and tells the browser what each part means.
+    </p>
+    <p>
+     HTML is made of
+     <strong>
+      tags
+     </strong>
+     . A tag usually has an
+     <em>
+      opening tag
+     </em>
+     and a
+     <em>
+      closing tag
+     </em>
+     . For example:
+    </p>
+    <pre>&lt;p&gt;This is a paragraph&lt;/p&gt;</pre>
+    <ul>
+     <li>
+      <strong>
+       Opening tag:
+      </strong>
+      <code>
+       &lt;p&gt;
+      </code>
+     </li>
+     <li>
+      <strong>
+       Content:
+      </strong>
+      The text inside the tag.
+     </li>
+     <li>
+      <strong>
+       Closing tag:
+      </strong>
+      <code>
+       &lt;/p&gt;
+      </code>
+      (note the slash
+      <code>
+       /
+      </code>
+      ).
+     </li>
+    </ul>
+    <p>
+     Some tags are
+     <strong>
+      self-closing
+     </strong>
+     (no content inside), like
+     <code>
+      &lt;br&gt;
+     </code>
+     for a line break or
+     <code>
+      &lt;img&gt;
+     </code>
+     for an image.
+    </p>
+    <p>
+     Tags can also have
+     <strong>
+      attributes
+     </strong>
+     to add extra information. Example:
+    </p>
+    <pre>&lt;img src="photo.jpg" alt="A beautiful view"&gt;</pre>
+   </section>
+   <!-- Original version (kept intact) -->
+   <section class="card">
+    <h2>
+     HTML Structure — Quick Look
+    </h2>
+    <p>
+     This basic example shows a heading and paragraph. The left pane is the code (read-only). The right pane renders the result.
+    </p>
+    <div class="two-col">
+     <div class="pane">
+      <h3>
+       Code
+      </h3>
+      <textarea readonly="">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;My First Webpage&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;Hello, world!&lt;/h1&gt;
+    &lt;p&gt;This is my first page.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+     </div>
+     <div class="pane">
+      <h3>
+       Result
+      </h3>
+      <div class="frame-wrap">
+       <iframe src="lesson1_preview.html" title="Result Preview 1">
+       </iframe>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- Understanding Website Sections (enhanced, with icons) -->
+   <section class="card">
+    <h2>
+     Understanding Website Sections
+    </h2>
+    <p>
+     To build a complete website, we often use these basic building blocks:
+    </p>
+    <div class="icons">
+     <div class="icon">
+      <span class="em">
+       🏠
+      </span>
+      Header
+     </div>
+     <div class="icon">
+      <span class="em">
+       🔗
+      </span>
+      Navigation
+     </div>
+     <div class="icon">
+      <span class="em">
+       📦
+      </span>
+      Content
+     </div>
+     <div class="icon">
+      <span class="em">
+        📘
+      </span>
+      Header
+     </div>
+     <div class="icon">
+      <span class="em">
+       📝
+      </span>
+      Paragraph
+     </div>
+     <div class="icon">
+      <span class="em">
+       📜
+      </span>
+      Footer
+     </div>
+    </div>
+    <div class="two-col" style="margin-top:14px">
+     <div class="pane">
+      <h3>
+       Code
+      </h3>
+      <textarea readonly="">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Complete Website&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;!-- Header: Contains the site title or logo --&gt;
+  &lt;header style='background-color:lightblue;padding:10px;'&gt;My Website Header&lt;/header&gt;
+
+  &lt;!-- Navigation: Contains links to different pages or sections --&gt;
+  &lt;nav style='background-color:#ddd;padding:10px;'&gt;Menu | About | Contact&lt;/nav&gt;
+
+  &lt;!-- Section: A thematic grouping of content --&gt;
+  &lt;section style='padding:10px;background-color:#f9f9f9;'&gt;
+    &lt;h1&gt;Welcome!&lt;/h1&gt;
+    &lt;p&gt;This is a sample section with text and content.&lt;/p&gt;
+  &lt;/section&gt;
+
+  &lt;!-- Footer: Contains copyright or site-wide information --&gt;
+  &lt;footer style='background-color:lightgray;padding:10px;'&gt;My Website Footer&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</textarea>
+     </div>
+     <div class="pane">
+      <h3>
+       Result
+      </h3>
+      <div class="frame-wrap">
+       <iframe srcdoc="&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;
+&lt;style&gt;
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+.legend span {
+  display: inline-block;
+  padding: 2px 6px;
+  color: #fff;
+  border-radius: 4px;
+  flex: 0 1 auto;
+}
+&lt;/style&gt;
+
+&lt;style&gt;
+header { border: 3px solid blue; padding:10px; }
+nav { border: 3px solid green; padding:10px; margin-top:5px; }
+section { border: 3px solid orange; padding:10px; margin-top:5px; position:relative; }
+section h1 { border: 2px solid red; padding:5px; margin-top:5px; }
+section p { border: 2px solid teal; padding:5px; margin-top:5px; }
+.content-icon { position:absolute; top:5px; right:5px; font-size:20px; }
+footer { border: 3px solid purple; padding:10px; margin-top:5px; }
+.legend { margin-top:10px; font-family:sans-serif; font-size:14px; }
+.legend span { display:inline-block; padding:2px 6px; margin-right:8px; color:#fff; border-radius:4px; }
+.legend .header { background:blue; }
+.legend .nav { background:green; }
+.legend .section { background:orange; }
+.legend .h1 { background:red; }
+.legend .p { background:teal; }
+.legend .footer { background:purple; }
+&lt;/style&gt;
+
+&lt;style&gt;
+header { border: 3px solid blue; padding:10px; }
+nav { border: 3px solid green; padding:10px; margin-top:5px; }
+section { border: 3px solid orange; padding:10px; margin-top:5px; }
+footer { border: 3px solid purple; padding:10px; margin-top:5px; }
+.legend { margin-top:10px; font-family:sans-serif; font-size:14px; }
+.legend span { display:inline-block; padding:2px 6px; margin-right:8px; color:#fff; border-radius:4px; }
+.legend .header { background:blue; }
+.legend .nav { background:green; }
+.legend .section { background:orange; }
+.legend .footer { background:purple; }
+&lt;/style&gt;
+&lt;meta charset='utf-8'&gt;&lt;title&gt;Complete Website&lt;/title&gt;&lt;/head&gt;&lt;body&gt;
+              &lt;header style='background-color:lightblue;padding:10px;'&gt;🏠 My Website Header&lt;/header&gt;
+              &lt;nav style='background-color:#ddd;padding:10px;'&gt;🔗 Menu | About | Contact&lt;/nav&gt;
+              &lt;section style='padding:10px;background-color:#f9f9f9;'&gt;📦
+                &lt;h1&gt;📘 Welcome!&lt;/h1&gt;
+                &lt;p&gt;📝 This is a sample section with text and content.&lt;/p&gt;
+              &lt;/section&gt;
+              &lt;footer style='background-color:lightgray;padding:10px;'&gt;📜 My Website Footer&lt;/footer&gt;
+              
+&lt;div class=&quot;legend&quot;&gt;&lt;span class=&quot;content&quot; style=&quot;background:orange;&quot;&gt;Content&lt;/span&gt;
+  &lt;span class=&quot;header&quot;&gt;Header&lt;/span&gt;
+  &lt;span class=&quot;nav&quot;&gt;Navigation&lt;/span&gt;
+  &lt;span class=&quot;footer&quot;&gt;Footer&lt;/span&gt;
+  &lt;span class=&quot;h1&quot;&gt;Heading (h1)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;Paragraph&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;&lt;/html&gt;" title="Result Preview 2">
+       </iframe>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- Your Task (interactive like lesson1_updated) -->
+   <section class="card">
+    <h2>
+     Your Task
+    </h2>
+    <p>
+     Create a heading and a paragraph. The heading should say
+     <strong>
+      "My First Webpage"
+     </strong>
+     and the paragraph can be any text you want.
+    </p>
+    <div class="two-col">
+     <div class="pane">
+      <h3>
+        Your Code (editable)
+      </h3>
+      <textarea id="task-code" placeholder="Write your HTML code here..."></textarea>
+     </div>
+     <div class="pane">
+      <h3>
+       Result
+      </h3>
+      <div class="frame-wrap">
+       <iframe id="task-preview" title="Task Result">
+       </iframe>
+      </div>
+     </div>
+    </div>
+    <div class="btns">
+     <button class="btn-primary" onclick="checkAnswer()">
+      Check Answer
+     </button>
+     <div class="button-container" style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;">
+      <button class="btn-warn" onclick="showHint()">
+       Show Hint
+      </button>
+      <button disabled="True" id="nextLessonBtn" style="opacity:0.5;cursor:not-allowed;">
+       Next Lesson
+      </button>
+     </div>
+    </div>
+    <div class="feedback" id="feedback">
+    </div>
+   </section>
+  </main>
+  <script src="lesson1.js"></script>
+  <script src="../lesson-navigation.js"></script>
+ </body>
+</html>

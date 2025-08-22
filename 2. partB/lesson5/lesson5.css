@@ -1,0 +1,453 @@
+/* Lesson 5 Styles - Semantic HTML */
+
+:root{
+  --brand:#007BFF;
+  --bg:#f4f8ff;
+  --box:#ffffff;
+  --muted:#eef4ff;
+  --border:#dde7ff;
+  --text:#222;
+  --success:#27ae60;
+  --error:#e74c3c;
+  --warning:#f39c12;
+  --js-color:#f7df1e;
+  --js-dark:#323330;
+  --property-bg:#fff3cd;
+  --syntax-bg:#e8f5e8;
+  --variable-color:#e91e63;
+  --operator-color:#9c27b0;
+  --string-color:#4caf50;
+  --number-color:#ff9800;
+  --boolean-color:#2196f3;
+  --console-color:#212529;
+}
+
+/* Focus management for mobile */
+button:focus,
+textarea:focus {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+.home-button:focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+/* Touch-friendly scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--muted);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand);
+}
+
+
+  *{box-sizing:border-box}
+  
+  body {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400; /* normal text */
+    line-height: 1.55;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg);
+    color: var(--text);
+  }
+
+  .home-button {
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    background: linear-gradient(145deg, #ff9800, #ffb74d); /* vibrant orange gradient */
+    color: white;
+    padding: 12px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 18px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    animation: pulseGlow 2.5s infinite; /* subtle glow pulse */
+  }
+  
+  /* Hover interaction */
+  .home-button:hover {
+    transform: translateY(-1px) scale(1.12);  /* smooth lift */
+    box-shadow: 0 10px 20px rgba(255,152,0,0.6); /* glowing orange aura */
+  }
+  
+  /* Click / active state */
+  .home-button:active {
+    transform: scale(0.9);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  }
+  
+  /* Subtle glowing pulse */
+  @keyframes pulseGlow {
+    0% { box-shadow: 0 6px 12px rgba(255,152,0,0.3); }
+    50% { box-shadow: 0 8px 20px rgba(255,152,0,0.6); }
+    100% { box-shadow: 0 6px 12px rgba(255,152,0,0.3); }
+  }
+  
+  @media (max-width: 860px){
+    .home-button {
+      top: 15px;
+      left: 12px;
+    }
+  }
+  
+  .lesson-header {
+    background-color: var(--brand);
+    color: #fff;
+    padding: 16px 12px;
+    text-align: center;
+  }
+  
+  .lesson-content {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  section {
+    background: var(--box);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.06);
+    padding: 20px;
+    margin-bottom: 28px;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+  
+  h2 {
+    margin: 0 0 12px 0;
+    color: var(--brand);
+    font-size: 1.25rem;
+  }
+  
+  h3 {
+    margin: 16px 0 8px 0;
+    color: var(--brand);
+    font-size: 1.1rem;
+  }
+  
+  h4 {
+    margin: 12px 0 6px 0;
+    color: var(--text);
+    font-size: 1rem;
+  }
+  
+  p { margin: 0 0 12px 0; }
+  ul { margin: 0 0 12px 22px; }
+  
+  code, pre {
+    background: #f2f6ff;
+    padding: .2em .4em;
+    border-radius: 6px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: .9rem;
+  }
+  
+  pre {
+    padding: 12px;
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    line-height: 1.4;
+  }
+  
+  /* Semantic element examples */
+  .semantic-types {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin: 16px 0;
+  }
+  
+  .semantic-example {
+    flex: 1 1 300px;
+    background: #f8f9ff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+  }
+  
+  .semantic-example h4 {
+    margin-top: 0;
+    color: var(--brand);
+  }
+  
+  .semantic-example pre {
+    background: #fff;
+    font-size: .85rem;
+    margin-bottom: 0;
+  }
+  
+  /* Structure visualization */
+  .structure-visual {
+    background: #f8f9ff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    margin-top: 16px;
+  }
+  
+  .structure-visual h4 {
+    margin-top: 0;
+  }
+  
+  .structure-visual pre.correct {
+    background: #d5f4e6;
+    border: 1px solid var(--success);
+  }
+  
+  .structure-visual pre.incorrect {
+    background: #fadbd8;
+    border: 1px solid var(--error);
+  }
+  
+  .error-note {
+    color: var(--error);
+    font-weight: 600;
+    font-size: .9rem;
+    margin-top: 8px;
+    margin-bottom: 0;
+  }
+  
+  /* Icons for understanding section */
+  .icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 12px;
+  }
+  
+  .icon {
+    flex: 1 1 200px;
+    background: #f2f6ff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+    font-size: .95rem;
+  }
+  
+  .icon .em {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+  
+  /* Editor and preview layout */
+  .editor-task-container {
+    display: flex;
+    gap: 16px;
+    align-items: stretch;
+    margin-top: 12px;
+    flex-wrap: wrap;
+  }
+  
+  .editor-box {
+    flex: 1 1 420px;
+    display: flex;
+    flex-direction: column;
+    min-height: 340px;
+  }
+  
+  .editor-label {
+    background: var(--brand);
+    color: white;
+    padding: 10px 12px;
+    font-size: .95rem;
+    font-weight: 600;
+    border-radius: 10px 10px 0 0;
+    margin: 0;
+  }
+  
+  textarea {
+    flex: 1;
+    width: 100%;
+    border: 1px solid var(--border);
+    border-top: 0;
+    border-radius: 0 0 10px 10px;
+    padding: 12px;
+    resize: none;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: .95rem;
+    background: #f2f6ff;
+    color: #0d1b3d;
+    line-height: 1.4;
+  }
+  
+  textarea[disabled] {
+    background: #edf3ff;
+    color: #1a2a55;
+    cursor: not-allowed;
+  }
+  
+  textarea::placeholder {
+    color: #7a8fa3;
+    font-style: italic;
+  }
+  
+  .result-container {
+    flex: 1 1 420px;
+    background: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 340px;
+  }
+  
+  .result-header {
+    background: var(--brand);
+    color: white;
+    padding: 10px 12px;
+    font-size: .95rem;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  iframe {
+    flex: 1;
+    width: 100%;
+    border: none;
+    background: #fff;
+  }
+  
+  /* Buttons */
+  .buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+  }
+  
+  button {
+    appearance: none;
+    border: 0;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: .95rem;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    font-weight: 600;
+  }
+  
+  #check-answer {
+    background: var(--brand);
+    color: #fff;
+  }
+  
+  #show-hint {
+    background: var(--warning);
+    color: #fff;
+  }
+  
+  #next-lesson {
+    background: var(--success);
+    color: #fff;
+  }
+  
+  button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  button:hover:not(:disabled) {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+  
+  /* Feedback */
+  #feedback {
+    margin-top: 10px;
+    font-weight: 600;
+    padding: 12px;
+    border-radius: 8px;
+    min-height: 24px;
+    border: 1px solid transparent;
+  }
+  
+  #feedback:empty {
+    display: none;
+  }
+  
+  /* Mobile responsive */
+  @media (max-width: 860px) {
+    .lesson-content {
+      padding: 15px;
+    }
+    
+    .editor-task-container {
+      flex-direction: column;
+    }
+    
+    .editor-box, .result-container {
+      min-height: 300px;
+    }
+    
+    .semantic-types {
+      flex-direction: column;
+    }
+    
+    .icons {
+      flex-direction: column;
+    }
+    
+    .icon {
+      flex: 1;
+    }
+    
+    .buttons {
+      justify-content: stretch;
+    }
+    
+    .buttons button {
+      flex: 1;
+      min-width: 120px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .lesson-content {
+      padding: 10px;
+    }
+    
+    section {
+      padding: 15px;
+    }
+    
+    pre {
+      font-size: .8rem;
+      padding: 10px;
+    }
+    
+    .structure-visual, .semantic-example {
+      padding: 12px;
+    }
+  }

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lesson14.css">
+    <title>Lesson 14 - Guided Mini Project</title>
+</head>
+<body>
+    <a href="../../1. partA/index.html" class="home-button" title="Back to PartA">🏠</a>
+    <header class="lesson-header">
+        <h1>Lesson 14: Guided Mini Project</h1>
+    </header>
+
+    <main class="lesson-content">
+        <section class="intro">
+            <h2>Introduction</h2>
+            <p>It's time to put everything together! In this guided mini project, you'll build a complete interactive website that combines HTML structure, CSS styling, and JavaScript functionality. This project will integrate all the concepts you've learned from Lessons 1-13.</p>
+            
+            <h3>Project Components</h3>
+            <div class="project-diagram">
+                <div class="project-demo">
+                    <div class="demo-container">
+                        <div class="project-concept html">
+                            <div class="concept-label">HTML Structure</div>
+                            <span class="concept-desc">Semantic layout with multiple sections</span>
+                        </div>
+                        <div class="project-concept css">
+                            <div class="concept-label">CSS Styling</div>
+                            <span class="concept-desc">Modern design with flexbox</span>
+                        </div>
+                        <div class="project-concept js">
+                            <div class="concept-label">JavaScript Interactivity</div>
+                            <span class="concept-desc">DOM manipulation and events</span>
+                        </div>
+                        <div class="project-concept integration">
+                            <div class="concept-label">Full Integration</div>
+                            <span class="concept-desc">Everything working together</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>What You'll Build</h3>
+            <div class="project-features">
+                <div class="feature">
+                    <h4>🏠 Personal Portfolio Site</h4>
+                    <p>A complete website with header, about section, skills showcase, and interactive elements</p>
+                    <code>Multi-section responsive layout</code>
+                </div>
+                
+                <div class="feature">
+                    <h4>🎨 Modern Styling</h4>
+                    <p>Professional CSS with flexbox layout, hover effects, and smooth transitions</p>
+                    <code>Flexbox + CSS animations</code>
+                </div>
+
+                <div class="feature">
+                    <h4>⚡ Interactive Features</h4>
+                    <p>JavaScript-powered theme toggle, skill progress bars, and contact form</p>
+                    <code>DOM manipulation + event handling</code>
+                </div>
+
+                <div class="feature">
+                    <h4>📱 Responsive Design</h4>
+                    <p>Works perfectly on desktop and mobile devices with adaptive layout</p>
+                    <code>Mobile-first CSS approach</code>
+                </div>
+            </div>
+        </section>
+
+        <section class="understanding">
+            <h2>Project Breakdown</h2>
+            <p>Follow this step-by-step guide to build your mini project. Each step builds on the previous ones:</p>
+            
+            <h3>Step-by-Step Guide</h3>
+            <div class="project-steps">
+                <div class="project-step">
+                    <h4>🏗️ Step 1: HTML Foundation</h4>
+                    <div class="step-content">
+                        <div class="step-text">
+                            <p>Create the basic HTML structure with semantic elements and proper IDs for JavaScript interaction.</p>
+                            <pre>// Required HTML sections
+&lt;header&gt; - Navigation and title
+&lt;main&gt; - Main content area
+  &lt;section id="about"&gt; - About section
+  &lt;section id="skills"&gt; - Skills section  
+  &lt;section id="contact"&gt; - Contact section
+&lt;footer&gt; - Footer information</pre>
+                        </div>
+                        <div class="visual-demo step-demo">
+                            <div class="html-structure">
+                                <div class="html-section">
+                                    <span class="section-tag">HEADER</span>
+                                    <span class="section-desc">Navigation & Title</span>
+                                </div>
+                                <div class="html-section">
+                                    <span class="section-tag">MAIN</span>
+                                    <span class="section-desc">About, Skills, Contact</span>
+                                </div>
+                                <div class="html-section">
+                                    <span class="section-tag">FOOTER</span>
+                                    <span class="section-desc">Copyright & Links</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-step">
+                    <h4>🎨 Step 2: CSS Styling</h4>
+                    <div class="step-content">
+                        <div class="step-text">
+                            <p>Apply modern CSS with flexbox layout, color scheme, typography, and responsive design.</p>
+                            <pre>// Key CSS concepts to include
+- CSS Reset and box-sizing
+- Flexbox for layout control
+- Modern color scheme
+- Responsive typography
+- Hover effects and transitions</pre>
+                        </div>
+                        <div class="visual-demo step-demo">
+                            <div class="css-showcase">
+                                <div class="style-preview">
+                                    <div class="color-box primary"></div>
+                                    <div class="color-box secondary"></div>
+                                    <div class="color-box accent"></div>
+                                </div>
+                                <div class="layout-preview">
+                                    <div class="flex-demo">
+                                        <div class="flex-item">Flex</div>
+                                        <div class="flex-item">Layout</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-step">
+                    <h4>⚡ Step 3: JavaScript Interactivity</h4>
+                    <div class="step-content">
+                        <div class="step-text">
+                            <p>Add interactive features using DOM manipulation, event listeners, and dynamic content updates.</p>
+                            <pre>// JavaScript features to implement
+- Theme toggle button (dark/light mode)
+- Animated skill progress bars
+- Form validation
+- Smooth scrolling navigation
+- Dynamic content updates</pre>
+                        </div>
+                        <div class="visual-demo step-demo">
+                            <div class="js-showcase">
+                                <div class="demo-button toggle-btn">
+                                    <span class="button-text">🌙 Toggle Theme</span>
+                                </div>
+                                <div class="progress-demo">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-step">
+                    <h4>🔗 Step 4: Integration & Testing</h4>
+                    <div class="step-content">
+                        <div class="step-text">
+                            <p>Combine all components, test functionality, and ensure everything works together smoothly.</p>
+                            <pre>// Final integration checklist
+✓ All sections display properly
+✓ JavaScript functions work
+✓ Responsive design active
+✓ Cross-browser compatibility
+✓ Performance optimization</pre>
+                        </div>
+                        <div class="visual-demo step-demo">
+                            <div class="integration-demo">
+                                <div class="demo-device">
+                                    <div class="device-screen">
+                                        <div class="demo-header"></div>
+                                        <div class="demo-content"></div>
+                                        <div class="demo-footer"></div>
+                                    </div>
+                                </div>
+                                <div class="check-indicator">✓ Working!</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Success Criteria</h3>
+            <div class="success-criteria">
+                <div class="criterion">
+                    <div class="criterion-icon">📝</div>
+                    <div class="criterion-content">
+                        <h4>Complete HTML Structure</h4>
+                        <p>Semantic HTML with header, main sections (about, skills, contact), and footer.</p>
+                    </div>
+                </div>
+                
+                <div class="criterion">
+                    <div class="criterion-icon">🎨</div>
+                    <div class="criterion-content">
+                        <h4>Professional CSS Styling</h4>
+                        <p>Modern design with flexbox layout, consistent color scheme, and responsive design.</p>
+                    </div>
+                </div>
+                
+                <div class="criterion">
+                    <div class="criterion-icon">⚡</div>
+                    <div class="criterion-content">
+                        <h4>Interactive JavaScript</h4>
+                        <p>Working theme toggle, skill animations, form validation, and event handling.</p>
+                    </div>
+                </div>
+                
+                <div class="criterion">
+                    <div class="criterion-icon">🔧</div>
+                    <div class="criterion-content">
+                        <h4>Proper Integration</h4>
+                        <p>All components work together seamlessly without errors or conflicts.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="project-template">
+                <h4>📋 Project Template Structure:</h4>
+                <pre class="template-code">// Complete project structure template
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My Portfolio&lt;/title&gt;
+    &lt;style&gt;
+        /* Your CSS styles here */
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;nav&gt;
+            &lt;h1&gt;Your Name&lt;/h1&gt;
+            &lt;button id="themeToggle"&gt;🌙 Toggle Theme&lt;/button&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+    
+    &lt;main&gt;
+        &lt;section id="about"&gt;
+            &lt;h2&gt;About Me&lt;/h2&gt;
+            &lt;p&gt;Your introduction here...&lt;/p&gt;
+        &lt;/section&gt;
+        
+        &lt;section id="skills"&gt;
+            &lt;h2&gt;Skills&lt;/h2&gt;
+            &lt;div class="skill-item"&gt;
+                &lt;span&gt;HTML&lt;/span&gt;
+                &lt;div class="progress-bar"&gt;
+                    &lt;div class="progress" data-skill="90"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            // More skills...
+        &lt;/section&gt;
+        
+        &lt;section id="contact"&gt;
+            &lt;h2&gt;Contact&lt;/h2&gt;
+            &lt;form id="contactForm"&gt;
+                &lt;input type="text" id="name" placeholder="Your Name" required&gt;
+                &lt;input type="email" id="email" placeholder="Your Email" required&gt;
+                &lt;textarea id="message" placeholder="Your Message" required&gt;&lt;/textarea&gt;
+                &lt;button type="submit"&gt;Send Message&lt;/button&gt;
+            &lt;/form&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+    
+    &lt;footer&gt;
+        &lt;p&gt;&amp;copy; 2024 Your Name. All rights reserved.&lt;/p&gt;
+    &lt;/footer&gt;
+    
+    &lt;script&gt;
+        /* Your JavaScript code here */
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+                
+                <p class="template-note">💡 <strong>Pro tip:</strong> This template gives you the foundation. Customize it with your own content, colors, and style preferences!</p>
+            </div>
+        </section>
+
+        <section class="task">
+            <h2>Your Task</h2>
+            <p>Build a complete portfolio website that demonstrates mastery of HTML, CSS, and JavaScript. Your project should include:</p>
+            <ul>
+                <li><strong>Complete HTML structure</strong> with semantic elements and proper IDs</li>
+                <li><strong>Professional CSS styling</strong> using flexbox layout and responsive design</li>
+                <li><strong>Interactive JavaScript features</strong> including theme toggle and skill animations</li>
+                <li><strong>Working contact form</strong> with JavaScript validation</li>
+                <li><strong>Smooth user experience</strong> with transitions and hover effects</li>
+                <li><strong>Mobile responsiveness</strong> that works on different screen sizes</li>
+            </ul>
+            <p><strong>Need help?</strong> Click "Show Hint" anytime for step-by-step guidance and code examples!</p>
+            
+            <div class="editor-task-container">
+                <div class="editor-box">
+                    <div class="editor-label">Your Complete Website Code (HTML + CSS + JavaScript)</div>
+                    <textarea id="code-editor" 
+                    placeholder="Build your complete portfolio website here!
+
+💡 Getting started:
+1. Start with the HTML structure (header, main, footer)
+2. Add CSS for styling and layout
+3. Include JavaScript for interactivity
+4. Test all features work together
+
+Click 'Show Hint' for detailed step-by-step guidance and code examples!
+
+Example beginning:
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>My Portfolio</title>
+    <style>
+        /* Your CSS styles here */
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Your Name</h1>
+            <button id='themeToggle'>🌙 Toggle Theme</button>
+        </nav>
+    </header>
+    
+    <!-- Continue building your site... -->
+    
+    <script>
+        // Your JavaScript code here
+    </script>
+</body>
+</html>"></textarea>
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="check-answer">Check Project</button>
+                <button id="show-hint">Show Hint</button>
+                <button id="next-lesson" disabled>Final Challenge</button>
+            </div>
+            <div id="feedback"></div>
+        </section>
+    </main>
+
+    <script src="lesson14.js"></script>
+    <script src="../lesson-navigation.js"></script>
+</body>
+</html>

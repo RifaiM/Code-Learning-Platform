@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 5 - Semantic HTML</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lesson5.css">
+</head>
+<body>
+    <a href="../../1. partA/index.html" class="home-button" title="Back to PartA">🏠</a>
+    <header class="lesson-header">
+        <h1>Lesson 5: Semantic HTML</h1>
+    </header>
+
+    <main class="lesson-content">
+        <section class="intro">
+            <h2>Introduction</h2>
+            <p>Semantic HTML uses meaningful tags that describe the content's purpose, not just its appearance. 
+               This makes your website more accessible to screen readers, better for SEO, and easier for other developers to understand.</p>
+            
+            <h3>Key Semantic Elements</h3>
+            <div class="semantic-types">
+                <div class="semantic-example">
+                    <h4>📄 Article (&lt;article&gt;)</h4>
+                    <p>Self-contained content like blog posts, news articles, or comments:</p>
+                    <pre>&lt;article&gt;
+  &lt;h2&gt;Blog Post Title&lt;/h2&gt;
+  &lt;p&gt;Content of the post...&lt;/p&gt;
+&lt;/article&gt;</pre>
+                </div>
+                
+                <div class="semantic-example">
+                    <h4>📋 Section (&lt;section&gt;)</h4>
+                    <p>Groups related content with a clear theme:</p>
+                    <pre>&lt;section&gt;
+  &lt;h2&gt;About Us&lt;/h2&gt;
+  &lt;p&gt;Company information...&lt;/p&gt;
+&lt;/section&gt;</pre>
+                </div>
+
+                <div class="semantic-example">
+                    <h4>📌 Aside (&lt;aside&gt;)</h4>
+                    <p>Content related to main content but separate (sidebar, ads):</p>
+                    <pre>&lt;aside&gt;
+  &lt;h3&gt;Related Links&lt;/h3&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/aside&gt;</pre>
+                </div>
+
+                <div class="semantic-example">
+                    <h4>🎯 Main (&lt;main&gt;)</h4>
+                    <p>The primary content area (only one per page):</p>
+                    <pre>&lt;main&gt;
+  &lt;h1&gt;Page Title&lt;/h1&gt;
+  &lt;p&gt;Main page content...&lt;/p&gt;
+&lt;/main&gt;</pre>
+                </div>
+            </div>
+
+            <h3>Complete Structure Example</h3>
+            <pre>&lt;header&gt;Site Header&lt;/header&gt;
+&lt;main&gt;
+  &lt;section&gt;
+    &lt;article&gt;Blog post content&lt;/article&gt;
+  &lt;/section&gt;
+  &lt;aside&gt;Sidebar content&lt;/aside&gt;
+&lt;/main&gt;
+&lt;footer&gt;Site Footer&lt;/footer&gt;</pre>
+        </section>
+
+        <section class="quicklook-understanding">
+            <h2>Semantic HTML — Quick Look</h2>
+            <p>See how semantic elements create meaningful document structure:</p>
+            <div class="editor-task-container">
+                <div class="editor-box">
+                    <div class="editor-label">HTML Code</div>
+                    <textarea disabled id="example">&lt;header&gt;
+  &lt;h1&gt;My Tech Blog&lt;/h1&gt;
+  &lt;nav&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+  &lt;section&gt;
+    &lt;h2&gt;Latest Posts&lt;/h2&gt;
+    &lt;article&gt;
+      &lt;h3&gt;Understanding HTML5&lt;/h3&gt;
+      &lt;p&gt;HTML5 brings semantic meaning to web development...&lt;/p&gt;
+    &lt;/article&gt;
+  &lt;/section&gt;
+  
+  &lt;aside&gt;
+    &lt;h3&gt;Popular Tags&lt;/h3&gt;
+    &lt;ul&gt;
+      &lt;li&gt;HTML&lt;/li&gt;
+      &lt;li&gt;CSS&lt;/li&gt;
+      &lt;li&gt;JavaScript&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/aside&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+  &lt;p&gt;&copy; 2024 My Tech Blog&lt;/p&gt;
+&lt;/footer&gt;</textarea>
+                </div>
+                <div class="result-container">
+                    <div class="result-header">Result</div>
+                    <iframe class="preview-frame" src="lesson5_preview.html"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="understanding">
+            <h2>Understanding Semantic Structure</h2>
+            <p>Semantic HTML creates a logical hierarchy that both browsers and assistive technologies can understand:</p>
+            <div class="icons">
+                <div class="icon">
+                    <span class="em">🏗️</span>
+                    <strong>Document Structure</strong><br>
+                    Clear hierarchy with meaningful containers
+                </div>
+                <div class="icon">
+                    <span class="em">♿</span>
+                    <strong>Accessibility</strong><br>
+                    Screen readers understand content purpose
+                </div>
+                <div class="icon">
+                    <span class="em">🔍</span>
+                    <strong>SEO Benefits</strong><br>
+                    Search engines better understand your content
+                </div>
+                <div class="icon">
+                    <span class="em">👥</span>
+                    <strong>Team Collaboration</strong><br>
+                    Other developers quickly understand structure
+                </div>
+            </div>
+            
+            <div class="structure-visual">
+                <h4>✅ Semantic Structure:</h4>
+                <pre class="correct">&lt;main&gt;
+  &lt;section&gt;
+    &lt;h2&gt;Blog Posts&lt;/h2&gt;
+    &lt;article&gt;
+      &lt;h3&gt;Post Title&lt;/h3&gt;
+      &lt;p&gt;Post content...&lt;/p&gt;
+    &lt;/article&gt;
+  &lt;/section&gt;
+&lt;/main&gt;</pre>
+                
+                <h4>❌ Non-Semantic Structure:</h4>
+                <pre class="incorrect">&lt;div&gt;
+  &lt;div&gt;
+    &lt;h2&gt;Blog Posts&lt;/h2&gt;
+    &lt;div&gt;
+      &lt;h3&gt;Post Title&lt;/h3&gt;
+      &lt;p&gt;Post content...&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+                <p class="error-note">⚠️ Generic divs provide no semantic meaning!</p>
+            </div>
+        </section>
+
+        <section class="task">
+            <h2>Your Task</h2>
+            <p>Create a semantic blog page structure. Your page should include:</p>
+            <ul>
+                <li>A <code>&lt;header&gt;</code> element with site title</li>
+                <li>A <code>&lt;main&gt;</code> element containing the primary content</li>
+                <li>A <code>&lt;section&gt;</code> inside main for grouping content</li>
+                <li>An <code>&lt;article&gt;</code> inside the section with a blog post</li>
+                <li>A <code>&lt;footer&gt;</code> element at the bottom</li>
+            </ul>
+            <p><strong>Validation requirements:</strong> Must contain <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;footer&gt;</code>.</p>
+            
+            <div class="editor-task-container">
+                <div class="editor-box">
+                    <div class="editor-label">Your Code (editable)</div>
+                    <textarea id="code-editor" placeholder="Write your semantic HTML structure here...
+
+Hint: Start with <header>, then <main>, inside main put <section>, inside section put <article>, then end with <footer>."></textarea>
+                </div>
+                <div class="result-container">
+                    <div class="result-header">Result</div>
+                    <iframe id="result-frame"></iframe>
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="check-answer">Check Answer</button>
+                <button id="show-hint">Show Hint</button>
+                <button id="next-lesson" disabled>Next Lesson</button>
+            </div>
+            <div id="feedback"></div>
+        </section>
+    </main>
+
+    <script src="lesson5.js"></script>
+    <script src="../lesson-navigation.js"></script>
+</body>
+</html>

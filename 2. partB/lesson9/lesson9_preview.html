@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lesson9.css">
+    <title>Lesson 9 Preview</title>
+</head>
+<body>
+    <header class="header">
+        <h1>CSS Positioning Demo</h1>
+    </header>
+    
+    <aside class="sidebar">
+        <h3>📌 Sidebar</h3>
+        <p>This sidebar uses <strong>position: absolute</strong> to float alongside the main content.</p>
+    </aside>
+    
+    <main class="content">
+        <h2>Understanding CSS Positioning</h2>
+        <p>This page demonstrates various CSS positioning techniques. The header uses <strong>position: fixed</strong> to stay at the top, while the footer is also fixed at the bottom.</p>
+        
+        <div class="card">
+            <div class="badge">NEW</div>
+            <h3>🎯 Positioned Elements</h3>
+            <p>This card has a badge positioned absolutely in the top-right corner. The badge uses <strong>position: absolute</strong> with <strong>top: -10px</strong> and <strong>right: -10px</strong>.</p>
+        </div>
+        
+        <div class="position-demo">
+            <div class="demo-element">Static Element (normal flow)</div>
+            <div class="demo-element relative-element">Relative Element (offset)</div>
+            <div class="demo-element absolute-element">Absolute Element</div>
+        </div>
+        
+        <div class="feature-list">
+            <div class="feature-item">
+                <h4>📍 Fixed Header</h4>
+                <p>Stays at the top of the viewport using <code>position: fixed</code> and <code>top: 0</code>.</p>
+            </div>
+            
+            <div class="feature-item">
+                <h4>🎯 Absolute Sidebar</h4>
+                <p>Positioned relative to the viewport with <code>position: absolute</code>.</p>
+            </div>
+            
+            <div class="feature-item">
+                <h4>📌 Sticky Footer</h4>
+                <p>Always visible at bottom using <code>position: fixed</code> and <code>bottom: 0</code>.</p>
+            </div>
+            
+            <div class="feature-item">
+                <h4>🔄 Relative Elements</h4>
+                <p>Positioned relative to their normal position in the document flow.</p>
+            </div>
+        </div>
+        
+        <p>Scroll down to see how the fixed header and footer behavior works. The content area has proper margins to prevent overlap with the fixed positioned elements.</p>
+        
+        <p>Notice how different positioning methods interact: static elements follow normal flow, relative elements can be offset from their normal position, absolute elements are positioned relative to their nearest positioned ancestor, and fixed elements are positioned relative to the viewport.</p>
+        
+        <div class="card">
+            <h3>⚡ Key Benefits</h3>
+            <p>CSS positioning gives you precise control over element placement, enables overlapping content, creates sticky navigation, and allows for complex layouts that adapt to different screen sizes.</p>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <p>© 2024 CSS Positioning Demo - This footer uses position: fixed to stay at the bottom</p>
+    </footer>
+</body>
+</html>

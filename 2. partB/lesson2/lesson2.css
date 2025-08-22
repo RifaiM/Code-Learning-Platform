@@ -1,0 +1,350 @@
+/* Lesson 2 Styles â€" Final Fixed */
+
+:root{
+  --brand:#007BFF;
+  --bg:#f4f8ff;
+  --box:#ffffff;
+  --muted:#eef4ff;
+  --border:#dde7ff;
+  --text:#222;
+  --success:#27ae60;
+  --error:#e74c3c;
+  --warning:#f39c12;
+  --js-color:#f7df1e;
+  --js-dark:#323330;
+  --property-bg:#fff3cd;
+  --syntax-bg:#e8f5e8;
+  --variable-color:#e91e63;
+  --operator-color:#9c27b0;
+  --string-color:#4caf50;
+  --number-color:#ff9800;
+  --boolean-color:#2196f3;
+  --console-color:#212529;
+}
+
+/* Focus management for mobile */
+button:focus,
+textarea:focus {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+.home-button:focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+/* Touch-friendly scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--muted);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand);
+}
+
+
+*{box-sizing:border-box}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400; /* normal text */
+  line-height: 1.55;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+}
+
+.home-button {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  background: linear-gradient(145deg, #ff9800, #ffb74d); /* vibrant orange gradient */
+  color: white;
+  padding: 12px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 18px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  animation: pulseGlow 2.5s infinite; /* subtle glow pulse */
+}
+
+/* Hover interaction */
+.home-button:hover {
+  transform: translateY(-1px) scale(1.12);  /* smooth lift */
+  box-shadow: 0 10px 20px rgba(255,152,0,0.6); /* glowing orange aura */
+}
+
+/* Click / active state */
+.home-button:active {
+  transform: scale(0.9);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* Subtle glowing pulse */
+@keyframes pulseGlow {
+  0% { box-shadow: 0 6px 12px rgba(255,152,0,0.3); }
+  50% { box-shadow: 0 8px 20px rgba(255,152,0,0.6); }
+  100% { box-shadow: 0 6px 12px rgba(255,152,0,0.3); }
+}
+
+@media (max-width: 860px){
+  .home-button {
+    top: 15px;
+    left: 12px;
+  }
+}
+
+.lesson-header {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 16px 12px;
+  text-align: center;
+}
+
+.lesson-content {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #007BFF;
+}
+
+.code-box,
+.preview-frame {
+    width: 100%;
+    min-height: 340px;
+    border-radius: 6px;
+    background-color: #fdfdfd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Side-by-side Quick Look + Understanding */
+.side-by-side {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.side-by-side section {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Task editor + result side by side */
+.editor-task-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: nowrap;
+  border: none;
+  padding: 0.5rem 0;
+}
+
+.editor-box {
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-label {
+  background: #007BFF;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 6px 6px 0 0;
+  font-weight: 600;
+  text-align: left;
+}
+
+textarea {
+  flex: 1;
+  height: 240px;
+  font-family: monospace;
+  border:1px solid var(--border);
+  border-radius: 0 0 6px 6px;
+  padding: 0.5rem;
+  resize: none;
+  background-color: #f2f6ff;
+}
+
+#example {
+  cursor: not-allowed;
+}
+
+.result-container {
+  flex: 1;
+  border:1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 240px; /* match editor textarea */
+  background-color: #f2f6ff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.result-header {
+  background: #007BFF;
+  color: white;
+  padding: 0.5rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+iframe {
+  flex: 1;
+  width: 100%;
+  border: none;
+  overflow: hidden;
+  background: var(--box);
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+button {
+  appearance: none;
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: .95rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  font-weight: 600;
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+button:hover:not(:disabled) {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+#check-answer { background: #007BFF; color: white; }
+#show-hint { background: #f39c12; color: white; }
+#next-lesson { background: #27ae60; color: white; }
+
+#feedback {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  font-weight: bold;
+}
+
+.is-disabled{opacity:.55;cursor:not-allowed;}
+
+
+/* Mobile friendly layout - matching lesson4.css */
+@media (max-width: 860px) {
+  .lesson-content {
+    padding: 15px;
+  }
+  
+  .editor-task-container,
+  .code-preview-container,
+  .quicklook-section,
+  .your-task {
+    display: block !important;
+    width: 100% !important;
+  }
+  textarea, iframe, .code-box, .result-container {
+    width: 100% !important;
+    min-width: unset !important;
+  }
+  .side-by-side {
+    flex-direction: column !important;
+  }
+  
+  section {
+    padding: 15px;
+  }
+  
+  .buttons {
+    justify-content: stretch;
+  }
+  
+  .buttons button {
+    flex: 1;
+    min-width: 120px;
+  }
+}
+
+
+/* Ensure code boxes and result have same height */
+@media (max-width: 768px) {
+  .code-box, .result-container, .editor-task-container textarea, .editor-task-container iframe {
+    min-height: 200px;
+    height: auto;
+    box-sizing: border-box;
+  }
+}
+
+
+/* Add spacing between stacked boxes in mobile view */
+@media (max-width: 768px) {
+  .code-box, 
+  .result-container, 
+  .editor-task-container textarea, 
+  .editor-task-container iframe {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .lesson-content {
+    padding: 10px;
+  }
+  
+  section {
+    padding: 15px;
+  }
+  
+  pre {
+    font-size: .8rem;
+    padding: 10px;
+  }
+}

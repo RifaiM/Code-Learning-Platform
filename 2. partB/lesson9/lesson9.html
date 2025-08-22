@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lesson9.css">
+    <title>Lesson 9 - CSS Positioning</title>
+</head>
+<body>
+    <a href="../../1. partA/index.html" class="home-button" title="Back to PartA">🏠</a>
+    <header class="lesson-header">
+        <h1>Lesson 9: CSS Positioning</h1>
+    </header>
+
+    <main class="lesson-content">
+        <section class="intro">
+            <h2>Introduction</h2>
+            <p>CSS positioning allows you to precisely control where elements appear on the page. Understanding the different positioning methods gives you powerful control over your layout and enables advanced design techniques.</p>
+            
+            <h3>The Four Position Types</h3>
+            <div class="positioning-diagram">
+                <div class="position-demo">
+                    <div class="demo-container">
+                        <div class="position-example static">
+                            <div class="position-label">static</div>
+                            <span class="position-desc">Normal document flow</span>
+                        </div>
+                        <div class="position-example relative">
+                            <div class="position-label">relative</div>
+                            <span class="position-desc">Offset from normal position</span>
+                        </div>
+                        <div class="position-example absolute">
+                            <div class="position-label">absolute</div>
+                            <span class="position-desc">Positioned relative to nearest positioned parent</span>
+                        </div>
+                        <div class="position-example fixed">
+                            <div class="position-label">fixed</div>
+                            <span class="position-desc">Fixed to viewport</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Key Position Properties</h3>
+            <div class="position-components">
+                <div class="component">
+                    <h4>📍 position: static</h4>
+                    <p>Default positioning - follows normal document flow</p>
+                    <code>position: static;</code>
+                </div>
+                
+                <div class="component">
+                    <h4>🔄 position: relative</h4>
+                    <p>Positioned relative to its normal position</p>
+                    <code>position: relative; top: 10px;</code>
+                </div>
+
+                <div class="component">
+                    <h4>🎯 position: absolute</h4>
+                    <p>Positioned relative to nearest positioned ancestor</p>
+                    <code>position: absolute; top: 0; right: 0;</code>
+                </div>
+
+                <div class="component">
+                    <h4>📌 position: fixed</h4>
+                    <p>Fixed position relative to viewport</p>
+                    <code>position: fixed; bottom: 0;</code>
+                </div>
+            </div>
+        </section>
+
+        <section class="understanding">
+            <h2>Understanding CSS Positioning</h2>
+            <p>Master each positioning method and when to use them:</p>
+            
+            <h3>Position Types Explained</h3>
+            <div class="position-explanations">
+                <div class="position-explanation">
+                    <h4>📍 Static Positioning (Default)</h4>
+                    <div class="explanation-content">
+                        <div class="explanation-text">
+                            <p>Elements follow the normal document flow. Top, right, bottom, left properties have no effect.</p>
+                            <pre>position: static; /* Default value */</pre>
+                        </div>
+                        <div class="visual-demo static-demo">
+                            <div class="demo-box">Box 1</div>
+                            <div class="demo-box">Box 2</div>
+                            <div class="demo-box">Box 3</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="position-explanation">
+                    <h4>🔄 Relative Positioning</h4>
+                    <div class="explanation-content">
+                        <div class="explanation-text">
+                            <p>Element is positioned relative to its normal position. Other elements are not affected.</p>
+                            <pre>position: relative;
+top: 20px;
+left: 30px;</pre>
+                        </div>
+                        <div class="visual-demo relative-demo">
+                            <div class="demo-box">Box 1</div>
+                            <div class="demo-box offset">Box 2 (offset)</div>
+                            <div class="demo-box">Box 3</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="position-explanation">
+                    <h4>🎯 Absolute Positioning</h4>
+                    <div class="explanation-content">
+                        <div class="explanation-text">
+                            <p>Element is removed from normal flow and positioned relative to nearest positioned ancestor.</p>
+                            <pre>position: absolute;
+top: 10px;
+right: 10px;</pre>
+                        </div>
+                        <div class="visual-demo absolute-demo">
+                            <div class="demo-container-abs">
+                                <div class="demo-box">Box 1</div>
+                                <div class="demo-box absolute-box">Absolute</div>
+                                <div class="demo-box">Box 2</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="position-explanation">
+                    <h4>📌 Fixed Positioning</h4>
+                    <div class="explanation-content">
+                        <div class="explanation-text">
+                            <p>Element is positioned relative to the viewport and stays in place when scrolling.</p>
+                            <pre>position: fixed;
+bottom: 20px;
+right: 20px;</pre>
+                        </div>
+                        <div class="visual-demo fixed-demo">
+                            <div class="fixed-demo-container">
+                                <div class="demo-content">
+                                    <p>This represents scrollable content. The green "Fixed" element would normally stay in place even when scrolling.</p>
+                                    <p>In a real webpage, a fixed element maintains its position relative to the viewport.</p>
+                                </div>
+                                <div class="fixed-element-demo">Fixed</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Common Use Cases</h3>
+            <div class="use-cases">
+                <div class="use-case">
+                    <div class="use-case-icon">🎯</div>
+                    <div class="use-case-content">
+                        <h4>Navigation Bars</h4>
+                        <p>Use <code>position: fixed</code> to keep navigation always visible at the top of the page.</p>
+                    </div>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-icon">🏷️</div>
+                    <div class="use-case-content">
+                        <h4>Badges & Labels</h4>
+                        <p>Use <code>position: absolute</code> to place badges on corners of elements.</p>
+                    </div>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-icon">📱</div>
+                    <div class="use-case-content">
+                        <h4>Sticky Footers</h4>
+                        <p>Use <code>position: fixed</code> to keep footers always visible at the bottom.</p>
+                    </div>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-icon">🎨</div>
+                    <div class="use-case-content">
+                        <h4>Overlays & Modals</h4>
+                        <p>Use <code>position: absolute</code> or <code>fixed</code> for popup overlays.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="structure-visual">
+                <h4>✅ Good Positioning Practice:</h4>
+                <pre class="correct">/* Sticky footer using fixed positioning */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #333;
+  color: white;
+  padding: 15px;
+  z-index: 100;
+}
+
+/* Content margin to prevent footer overlap */
+.main-content {
+  margin-bottom: 80px;
+}</pre>
+                
+                <h4>❌ Poor Positioning Practice:</h4>
+                <pre class="incorrect">/* Using absolute without positioned parent */
+.element {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* This will position relative to viewport, not parent */
+}
+
+/* Forgetting z-index for overlapping elements */
+.overlay {
+  position: fixed;
+  /* No z-index - might appear behind other elements */
+}</pre>
+                <p class="error-note">⚠️ Always consider the positioning context and use z-index for overlapping elements!</p>
+            </div>
+        </section>
+
+        <section class="task">
+            <h2>Your Task</h2>
+            <p>Create a webpage with a sticky footer using CSS positioning. Your page should include:</p>
+            <ul>
+                <li><strong>Header section</strong> with a title</li>
+                <li><strong>Main content area</strong> with several paragraphs</li>
+                <li><strong>Footer</strong> that uses <code>position: fixed</code></li>
+                <li>Footer should always stay at the bottom of the viewport</li>
+                <li>Content should have proper margin to avoid footer overlap</li>
+                <li>Include at least one element with <code>position: absolute</code></li>
+            </ul>
+            <p><strong>Validation requirements:</strong> Must use <code>position: fixed</code> for footer and proper spacing to prevent content overlap.</p>
+            
+            <div class="editor-task-container">
+                <div class="editor-box">
+                    <div class="editor-label">Your Code (editable)</div>
+                    <textarea id="code-editor" placeholder="Write your HTML with CSS positioning here...
+
+Hint: Create a sticky footer using position: fixed.
+
+Example structure:
+<html>
+<head>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    .header {
+      background: #007BFF;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .main-content {
+      padding: 20px;
+      margin-bottom: 80px; /* Space for footer */
+    }
+    
+    .footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+  <header class='header'>
+    <h1>My Website</h1>
+  </header>
+  
+  <main class='main-content'>
+    <h2>Welcome</h2>
+    <p>This is the main content...</p>
+  </main>
+  
+  <footer class='footer'>
+    © 2024 My Website - Always visible at bottom
+  </footer>
+</body>
+</html>"></textarea>
+                </div>
+                <div class="result-container">
+                    <div class="result-header">Result</div>
+                    <iframe id="result-frame"></iframe>
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="check-answer">Check Answer</button>
+                <button id="show-hint">Show Hint</button>
+                <button id="next-lesson" disabled>Next Lesson</button>
+            </div>
+            <div id="feedback"></div>
+        </section>
+    </main>
+
+    <script src="lesson9.js"></script>
+    <script src="../lesson-navigation.js"></script>
+</body>
+</html>

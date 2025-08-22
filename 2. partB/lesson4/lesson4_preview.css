@@ -1,0 +1,101 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400; /* normal text */
+    padding: 15px;
+    background: #f9f9f9;
+    margin: 0;
+}
+h2 {
+    color: #007BFF;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 5px;
+    margin-top: 0;
+}
+
+/* Style different list types */
+ul {
+    background: #fff3cd;
+    border: 2px solid #ffc107;
+    border-radius: 8px;
+    padding: 15px 15px 15px 30px;
+    margin: 10px 0;
+}
+
+ol {
+    background: #d5f4e6;
+    border: 2px solid #28a745;
+    border-radius: 8px;
+    padding: 15px 15px 15px 30px;
+    margin: 10px 0;
+}
+
+li {
+    margin: 5px 0;
+    padding: 3px 0;
+}
+
+/* Navigation styling */
+nav {
+    background: #e3f2fd;
+    border: 3px solid #007BFF;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+nav ul {
+    background: transparent;
+    border: 2px dashed #007BFF;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+nav li {
+    background: #007BFF;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Visual indicators */
+ul::before {
+    content: "📋 Unordered List";
+    display: block;
+    font-weight: bold;
+    color: #856404;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+ol::before {
+    content: "🔢 Ordered List";
+    display: block;
+    font-weight: bold;
+    color: #155724;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+nav::before {
+    content: "🧭 Navigation Menu";
+    display: block;
+    font-weight: bold;
+    color: #004085;
+    margin-bottom: 8px;
+    font-size: 14px;
+}

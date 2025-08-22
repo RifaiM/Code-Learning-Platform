@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lesson12.css">
+    <title>Lesson 12 - Events & Listeners</title>
+</head>
+<body>
+    <a href="../../1. partA/index.html" class="home-button" title="Back to PartA">🏠</a>
+    <header class="lesson-header">
+        <h1>Lesson 12: Events & Listeners</h1>
+    </header>
+
+    <main class="lesson-content">
+        <section class="intro">
+            <h2>Introduction</h2>
+            <p>Events & Listeners are the foundation of interactive web experiences. They allow your JavaScript code to respond to user actions like clicks, hovers, key presses, and more. Instead of just changing content once, you can create dynamic responses to user interactions.</p>
+            
+            <h3>Core Event Handling Concepts</h3>
+            <div class="event-diagram">
+                <div class="event-demo">
+                    <div class="demo-container">
+                        <div class="event-concept detection">
+                            <div class="concept-label">Event Detection</div>
+                            <span class="concept-desc">Listen for user interactions</span>
+                        </div>
+                        <div class="event-concept listener">
+                            <div class="concept-label">Event Listener</div>
+                            <span class="concept-desc">Function that responds to events</span>
+                        </div>
+                        <div class="event-concept response">
+                            <div class="concept-label">Event Response</div>
+                            <span class="concept-desc">Execute code when event occurs</span>
+                        </div>
+                        <div class="event-concept dynamic">
+                            <div class="concept-label">Dynamic Interaction</div>
+                            <span class="concept-desc">Continuous user engagement</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Event Handling Fundamentals</h3>
+            <div class="event-components">
+                <div class="component">
+                    <h4>🎯 addEventListener Method</h4>
+                    <p>Modern way to attach event handlers to elements</p>
+                    <code>element.addEventListener("click", function)</code>
+                </div>
+                
+                <div class="component">
+                    <h4>🖱️ Click Events</h4>
+                    <p>Respond to mouse clicks on buttons and elements</p>
+                    <code>button.addEventListener("click", handleClick)</code>
+                </div>
+
+                <div class="component">
+                    <h4>🏃 Hover Events</h4>
+                    <p>Detect when mouse enters and leaves elements</p>
+                    <code>element.addEventListener("mouseover", handleHover)</code>
+                </div>
+
+                <div class="component">
+                    <h4>🎨 Style Changes</h4>
+                    <p>Modify element appearance through event responses</p>
+                    <code>element.style.backgroundColor = "blue"</code>
+                </div>
+            </div>
+        </section>
+
+        <section class="understanding">
+            <h2>Understanding Events & Listeners</h2>
+            <p>Learn how to create interactive web experiences that respond to user actions:</p>
+            
+            <h3>Event Handling Concepts Explained</h3>
+            <div class="event-explanations">
+                <div class="event-explanation">
+                    <h4>🎯 addEventListener Method</h4>
+                    <div class="explanation-content">
+                        <div class="explanation-text">
+                            <p><code>addEventListener()</code> is the modern, flexible way to attach event handlers. It allows multiple listeners for the same event type.</p>
+                            <pre>// Basic syntax
+element.addEventListener("eventType", functionToRun);
+
+// Example with click event
+let button = document.getElementById("myButton");
+button.addEventListener("click", function() {
+    alert("Button was clicked!");
+});</pre>
+                        </div>
+                        <div class="visual-demo listener-demo">
+                            <div class="event-flow">
+                                <div class="event-element">
+                                    <span class="element-label">Button Element</span>
+                                </div>
+                                <div class="listener-connection">➕</div>
+                                <div class="listener-function">
+                                    <span class="function-label">addEventListener</span>
+                                </div>
+                                <div class="event-arrow">→</div>
+                                <div class="event-result">
+                                    <span class="result-label">Function Executes</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="event-explanation">
+                    <h4>🖱️ Click Event Handling</h4>
+                    <div class="explanation-content">
+                        <div class="explanation-text">
+                            <p>Click events are triggered when a user clicks on an element. They're the most common type of user interaction.</p>
+                            <pre>// HTML: &lt;button id="colorBtn"&gt;Change Color&lt;/button&gt;
+// JavaScript: Handle click events
+let colorButton = document.getElementById("colorBtn");
+
+colorButton.addEventListener("click", function() {
+    document.body.style.backgroundColor = "lightblue";
+    console.log("Background color changed!");
+});</pre>
+                        </div>
+                        <div class="visual-demo click-demo">
+                            <div class="interaction-sequence">
+                                <div class="step">
+                                    <span class="step-label">1. User Clicks</span>
+                                    <div class="demo-button clickable">Change Color</div>
+                                </div>
+                                <div class="sequence-arrow">→</div>
+                                <div class="step">
+                                    <span class="step-label">2. Event Triggers</span>
+                                    <div class="event-indicator">🎯 Click Event</div>
+                                </div>
+                                <div class="sequence-arrow">→</div>
+                                <div class="step">
+                                    <span class="step-label">3. Code Executes</span>
+                                    <div class="result-box">Background Changes!</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="event-explanation">
+                    <h4>🏃 Hover Events (mouseover/mouseout)</h4>
+                    <div class="explanation-content">
+                        <div class="explanation-text">
+                            <p>Hover events respond when the mouse cursor enters or leaves an element area.</p>
+                            <pre>// Handle hover events
+let hoverElement = document.getElementById("hoverBox");
+
+hoverElement.addEventListener("mouseover", function() {
+    this.style.backgroundColor = "yellow";
+    this.innerHTML = "Mouse is over me!";
+});
+
+hoverElement.addEventListener("mouseout", function() {
+    this.style.backgroundColor = "white";
+    this.innerHTML = "Hover over me!";
+});</pre>
+                        </div>
+                        <div class="visual-demo hover-demo">
+                            <div class="hover-states">
+                                <div class="hover-state">
+                                    <span class="state-label">Normal State:</span>
+                                    <div class="demo-box normal">Hover over me!</div>
+                                </div>
+                                <div class="hover-arrow">↔</div>
+                                <div class="hover-state">
+                                    <span class="state-label">Hover State:</span>
+                                    <div class="demo-box hovered">Mouse is over me!</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="event-explanation">
+                    <h4>🎨 Multiple Event Types</h4>
+                    <div class="explanation-content">
+                        <div class="explanation-text">
+                            <p>You can attach multiple different event listeners to the same element for rich interactions.</p>
+                            <pre>// Multiple events on one element
+let interactiveBox = document.getElementById("multiBox");
+
+interactiveBox.addEventListener("click", function() {
+    this.style.borderColor = "red";
+});
+
+interactiveBox.addEventListener("mouseover", function() {
+    this.style.transform = "scale(1.1)";
+});
+
+interactiveBox.addEventListener("mouseout", function() {
+    this.style.transform = "scale(1)";
+});</pre>
+                        </div>
+                        <div class="visual-demo multi-demo">
+                            <div class="multi-events">
+                                <div class="event-type">
+                                    <span class="event-name">Click</span>
+                                    <span class="event-effect">Border → Red</span>
+                                </div>
+                                <div class="event-type">
+                                    <span class="event-name">Hover</span>
+                                    <span class="event-effect">Scale → 110%</span>
+                                </div>
+                                <div class="event-type">
+                                    <span class="event-name">Leave</span>
+                                    <span class="event-effect">Scale → 100%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Common Use Cases</h3>
+            <div class="use-cases">
+                <div class="use-case">
+                    <div class="use-case-icon">🎮</div>
+                    <div class="use-case-content">
+                        <h4>Interactive Buttons</h4>
+                        <p>Create buttons that change appearance and trigger actions when clicked or hovered.</p>
+                    </div>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-icon">🎨</div>
+                    <div class="use-case-content">
+                        <h4>Dynamic Styling</h4>
+                        <p>Change colors, sizes, and styles of elements based on user interactions.</p>
+                    </div>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-icon">📱</div>
+                    <div class="use-case-content">
+                        <h4>Mobile Touch Events</h4>
+                        <p>Respond to touch interactions on mobile devices for responsive design.</p>
+                    </div>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-icon">⚡</div>
+                    <div class="use-case-content">
+                        <h4>Real-time Feedback</h4>
+                        <p>Provide instant visual feedback as users interact with your interface.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="structure-visual">
+                <h4>✅ Good Event Handling Practice:</h4>
+                <pre class="correct">// Clear structure and modern addEventListener
+&lt;button id="changeColorBtn"&gt;Change Background&lt;/button&gt;
+&lt;div id="hoverArea"&gt;Hover over me!&lt;/div&gt;
+
+// JavaScript with descriptive event handlers
+let colorButton = document.getElementById("changeColorBtn");
+let hoverArea = document.getElementById("hoverArea");
+
+colorButton.addEventListener("click", function() {
+    document.body.style.backgroundColor = getRandomColor();
+    console.log("Background color changed");
+});
+
+hoverArea.addEventListener("mouseover", function() {
+    this.style.backgroundColor = "lightblue";
+});</pre>
+                
+                <h4>❌ Poor Event Handling Practice:</h4>
+                <pre class="incorrect">// Old-style onclick and unclear structure
+&lt;button id="btn"&gt;Click&lt;/button&gt;
+&lt;div id="box"&gt;Text&lt;/div&gt;
+
+// JavaScript with unclear names and old methods
+let b = document.getElementById("btn");
+b.onclick = function() {
+    document.body.style.backgroundColor = "red";
+};
+
+document.getElementById("box").onmouseover = function() {
+    this.style.backgroundColor = "blue";
+};</pre>
+                <p class="error-note">⚠️ Use addEventListener() for better event handling and always use descriptive names!</p>
+            </div>
+        </section>
+
+        <section class="task">
+            <h2>Your Task</h2>
+            <p>Create an interactive webpage demonstrating event handling. Your code should include:</p>
+            <ul>
+                <li><strong>HTML structure</strong> with at least one button and one div element</li>
+                <li><strong>Unique ID attributes</strong> for elements you want to interact with</li>
+                <li><strong>JavaScript that uses addEventListener</strong> method</li>
+                <li><strong>Click event handler</strong> that changes the background color</li>
+                <li><strong>Hover event handler</strong> (mouseover/mouseout) on another element</li>
+                <li>The button should change the page background color when clicked</li>
+            </ul>
+            <p><strong>Validation requirements:</strong> Must use <code>addEventListener</code>, handle both click and hover events.</p>
+            
+            <div class="editor-task-container">
+                <div class="editor-box">
+                    <div class="editor-label">Your HTML & JavaScript Code (editable)</div>
+                    <textarea id="code-editor" 
+                    placeholder="Hint: Create a button and a div with IDs. Use addEventListener to handle click and hover events.
+
+Example structure:
+
+<html>
+<head>
+    <title>Events & Listeners</title>
+</head>
+<body>
+    <button id='colorBtn'>Change Background</button>
+    <div id='hoverBox'>Hover over me!</div>
+
+    <script>
+    let button = document.getElementById('colorBtn');
+    let hoverBox = document.getElementById('hoverBox');
+
+    button.addEventListener('click', function() {
+        document.body.style.backgroundColor = 'lightblue';
+    });
+
+    hoverBox.addEventListener('mouseover', function() {
+        this.style.backgroundColor = 'yellow';
+    });
+    </script>
+</body>
+</html>"></textarea>
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="check-answer">Check Answer</button>
+                <button id="show-hint">Show Hint</button>
+                <button id="next-lesson" disabled>Next Lesson</button>
+            </div>
+            <div id="feedback"></div>
+        </section>
+    </main>
+
+    <script src="lesson12.js"></script>
+    <script src="../lesson-navigation.js"></script>
+</body>
+</html>

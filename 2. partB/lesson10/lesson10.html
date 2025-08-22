@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lesson10.css">
+    <title>Lesson 10 - JavaScript Basics</title>
+</head>
+<body>
+    <a href="../../1. partA/index.html" class="home-button" title="Back to PartA">🏠</a>
+    <header class="lesson-header">
+        <h1>Lesson 10: JavaScript Basics</h1>
+    </header>
+
+    <main class="lesson-content">
+        <section class="intro">
+            <h2>Introduction</h2>
+            <p>JavaScript is the programming language that brings interactivity and dynamic behavior to web pages. It allows you to create responsive user interfaces, handle user input, and manipulate content in real-time.</p>
+            
+            <h3>Core JavaScript Concepts</h3>
+            <div class="js-diagram">
+                <div class="js-demo">
+                    <div class="demo-container">
+                        <div class="js-concept variables">
+                            <div class="concept-label">Variables</div>
+                            <span class="concept-desc">Store and manage data</span>
+                        </div>
+                        <div class="js-concept operators">
+                            <div class="concept-label">Operators</div>
+                            <span class="concept-desc">Perform calculations and comparisons</span>
+                        </div>
+                        <div class="js-concept console">
+                            <div class="concept-label">console.log</div>
+                            <span class="concept-desc">Display output and debug code</span>
+                        </div>
+                        <div class="js-concept functions">
+                            <div class="concept-label">Functions</div>
+                            <span class="concept-desc">Reusable blocks of code</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>JavaScript Fundamentals</h3>
+            <div class="js-components">
+                <div class="component">
+                    <h4>📦 Variables</h4>
+                    <p>Store data values that can be used and changed</p>
+                    <code>let name = "John"; const age = 25;</code>
+                </div>
+                
+                <div class="component">
+                    <h4>🔢 Operators</h4>
+                    <p>Perform mathematical and logical operations</p>
+                    <code>let sum = 5 + 3; let isEqual = x === y;</code>
+                </div>
+
+                <div class="component">
+                    <h4>🖥️ Console Output</h4>
+                    <p>Display information and debug your code</p>
+                    <code>console.log("Hello World!");</code>
+                </div>
+
+                <div class="component">
+                    <h4>🎯 Data Types</h4>
+                    <p>Different kinds of values JavaScript can handle</p>
+                    <code>string, number, boolean, object, array</code>
+                </div>
+            </div>
+        </section>
+
+        <section class="understanding">
+            <h2>Understanding JavaScript Basics</h2>
+            <p>Master the fundamental building blocks of JavaScript programming:</p>
+            
+            <h3>JavaScript Concepts Explained</h3>
+            <div class="js-explanations">
+                <div class="js-explanation">
+                    <h4>📦 Variables & Data Storage</h4>
+                    <div class="explanation-content">
+                        <div class="explanation-text">
+                            <p>Variables are containers that store data values. Use <code>let</code> for changeable values and <code>const</code> for constants.</p>
+                            <pre>// Variable declarations
+let userName = "Alice";
+const PI = 3.14159;
+let score = 100;</pre>
+                        </div>
+                        <div class="visual-demo variables-demo">
+                            <div class="demo-box variable">
+                                <span class="var-name">userName</span>
+                                <span class="var-value">"Alice"</span>
+                            </div>
+                            <div class="demo-box variable">
+                                <span class="var-name">score</span>
+                                <span class="var-value">100</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="js-explanation">
+                    <h4>🔢 Operators & Calculations</h4>
+                    <div class="explanation-content">
+                        <div class="explanation-text">
+                            <p>Operators perform operations on variables and values. JavaScript supports arithmetic, comparison, and logical operators.</p>
+                            <pre>// Arithmetic operators
+let sum = 10 + 5;        // Addition: 15
+let product = 4 * 3;     // Multiplication: 12
+let isEqual = x === y;   // Comparison: true/false</pre>
+                        </div>
+                        <div class="visual-demo operators-demo">
+                            <div class="operation">
+                                <span class="operand">10</span>
+                                <span class="operator">+</span>
+                                <span class="operand">5</span>
+                                <span class="equals">=</span>
+                                <span class="result">15</span>
+                            </div>
+                            <div class="operation">
+                                <span class="operand">4</span>
+                                <span class="operator">*</span>
+                                <span class="operand">3</span>
+                                <span class="equals">=</span>
+                                <span class="result">12</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="js-explanation">
+                    <h4>🖥️ Console Output & Debugging</h4>
+                    <div class="explanation-content">
+                        <div class="explanation-text">
+                            <p><code>console.log()</code> is your primary tool for displaying output and debugging code. It shows values in the browser's developer console.</p>
+                            <pre>// Console output examples
+console.log("Hello World!");
+console.log(userName);
+console.log("Score:", score);</pre>
+                        </div>
+                        <div class="visual-demo console-demo">
+                            <div class="console-window">
+                                <div class="console-header">Console</div>
+                                <div class="console-content">
+                                    <div class="console-line">› Hello World!</div>
+                                    <div class="console-line">› Alice</div>
+                                    <div class="console-line">› Score: 100</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="js-explanation">
+                    <h4>🎯 Data Types & Values</h4>
+                    <div class="explanation-content">
+                        <div class="explanation-text">
+                            <p>JavaScript has several data types: strings (text), numbers, booleans (true/false), objects, and arrays.</p>
+                            <pre>// Different data types
+let text = "Hello";      // String
+let number = 42;         // Number
+let isActive = true;     // Boolean
+let colors = ["red", "blue"]; // Array</pre>
+                        </div>
+                        <div class="visual-demo datatypes-demo">
+                            <div class="datatype-box string">
+                                <span class="type-label">String</span>
+                                <span class="type-example">"Hello"</span>
+                            </div>
+                            <div class="datatype-box number">
+                                <span class="type-label">Number</span>
+                                <span class="type-example">42</span>
+                            </div>
+                            <div class="datatype-box boolean">
+                                <span class="type-label">Boolean</span>
+                                <span class="type-example">true</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Common Use Cases</h3>
+            <div class="use-cases">
+                <div class="use-case">
+                    <div class="use-case-icon">💾</div>
+                    <div class="use-case-content">
+                        <h4>Data Storage</h4>
+                        <p>Use variables to store user input, form data, and application state.</p>
+                    </div>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-icon">🧮</div>
+                    <div class="use-case-content">
+                        <h4>Calculations</h4>
+                        <p>Perform math operations for shopping carts, scoring systems, and analytics.</p>
+                    </div>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-icon">🐛</div>
+                    <div class="use-case-content">
+                        <h4>Debugging</h4>
+                        <p>Use <code>console.log()</code> to track variable values and program flow.</p>
+                    </div>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-icon">🔄</div>
+                    <div class="use-case-content">
+                        <h4>Dynamic Content</h4>
+                        <p>Change webpage content based on user interactions and data.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="structure-visual">
+                <h4>✅ Good JavaScript Practice:</h4>
+                <pre class="correct">// Clear variable names and proper structure
+let userName = "John";
+const MAX_SCORE = 100;
+let currentScore = 0;
+
+// Calculate and display results
+let bonus = currentScore * 0.1;
+let totalScore = currentScore + bonus;
+
+console.log("User:", userName);
+console.log("Total Score:", totalScore);</pre>
+                
+                <h4>❌ Poor JavaScript Practice:</h4>
+                <pre class="incorrect">// Unclear variable names and no structure
+let x = "John";
+let y = 100;
+let z = 0;
+
+// No comments, unclear purpose
+let a = z * 0.1;
+let b = z + a;
+
+console.log(x, b); // Unclear output</pre>
+                <p class="error-note">⚠️ Always use descriptive variable names and include meaningful console.log() messages!</p>
+            </div>
+        </section>
+
+        <section class="task">
+            <h2>Your Task</h2>
+            <p>Create a JavaScript program that demonstrates basic programming concepts. Your code should include:</p>
+            <ul>
+                <li><strong>At least 3 variables</strong> with different data types (string, number, boolean)</li>
+                <li><strong>At least 2 mathematical operations</strong> using operators</li>
+                <li><strong>Multiple console.log() statements</strong> to display output</li>
+                <li>A <strong>greeting message</strong> that includes a variable</li>
+                <li>A <strong>calculation result</strong> displayed in the console</li>
+                <li>Use descriptive variable names and meaningful output messages</li>
+            </ul>
+            <p><strong>Validation requirements:</strong> Must contain <code>console.log()</code>, variables, and mathematical operations.</p>
+            
+            <div class="editor-task-container">
+                <div class="editor-box">
+                    <div class="editor-label">Your JavaScript Code (editable)</div>
+                    <textarea id="code-editor" placeholder="Write your JavaScript code here...
+
+Hint: Create variables and use console.log() to display a greeting and calculations.
+
+Example structure:
+<html>
+<head>
+  <title>JavaScript Basics</title>
+</head>
+<body>
+  <h1>JavaScript Basics Demo</h1>
+  <p>Open the browser console (F12) to see the output!</p>
+  
+  <script>
+    // Your variables
+    let userName = 'Alice';
+    let age = 25;
+    let isStudent = true;
+    
+    // Calculations
+    let birthYear = 2024 - age;
+    let futureAge = age + 10;
+    
+    // Console output
+    console.log('Hello, ' + userName + '!');
+    console.log('You are ' + age + ' years old');
+    console.log('You were born in:', birthYear);
+    console.log('In 10 years you will be:', futureAge);
+  </script>
+</body>
+</html>"></textarea>
+                </div>
+                <div class="result-container">
+                    <div class="result-header">Result & Console</div>
+                    <iframe id="result-frame"></iframe>
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="check-answer">Check Answer</button>
+                <button id="show-hint">Show Hint</button>
+                <button id="next-lesson" disabled>Next Lesson</button>
+            </div>
+            <div id="feedback"></div>
+        </section>
+    </main>
+
+    <script src="lesson10.js"></script>
+    <script src="../lesson-navigation.js"></script>
+</body>
+</html>

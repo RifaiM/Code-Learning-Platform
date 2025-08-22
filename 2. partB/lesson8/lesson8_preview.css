@@ -1,0 +1,247 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400; /* normal text */
+    margin: 0;
+    padding: 0;
+    background: #f8f9ff;
+    color: #333;
+    line-height: 1.6;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #007BFF;
+    padding: 15px 20px;
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+h1 {
+    color: #007BFF;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.container > p {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.card {
+    flex: 1 1 280px;
+    background: white;
+    padding: 25px;
+    border: 1px solid #dde7ff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.2);
+}
+
+.card h2 {
+    color: #007BFF;
+    margin: 0 0 15px 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.card p {
+    margin: 0;
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.card code {
+    background: #f2f6ff;
+    color: #e91e63;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.info-panel {
+    background: white;
+    border: 1px solid #dde7ff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.info-panel h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #007BFF;
+    font-size: 1.4rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.property-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.property-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #f8f9ff;
+    border: 1px solid #eef4ff;
+    border-radius: 8px;
+    border-left: 4px solid #007BFF;
+}
+
+.property-item strong {
+    color: #e91e63;
+    font-weight: 600;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.95rem;
+}
+
+.property-item span {
+    color: #666;
+    font-size: 0.9rem;
+    text-align: right;
+    flex: 1;
+    margin-left: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+    
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .container {
+        padding: 20px 15px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .card-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .card {
+        flex: 1;
+    }
+    
+    .property-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        text-align: left;
+    }
+    
+    .property-item span {
+        margin-left: 0;
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 15px;
+    }
+    
+    .logo {
+        font-size: 1.1rem;
+    }
+    
+    .nav-links {
+        gap: 10px;
+    }
+    
+    .nav-links a {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .container {
+        padding: 15px 10px;
+    }
+    
+    h1 {
+        font-size: 1.6rem;
+    }
+    
+    .card {
+        padding: 20px;
+    }
+    
+    .info-panel {
+        padding: 20px;
+    }
+}

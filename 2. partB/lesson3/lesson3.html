@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 3 - Links & Images</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lesson3.css">
+</head>
+<body>
+    <a href="../../1. partA/index.html" class="home-button" title="Back to PartA">🏠</a>
+    <header class="lesson-header">
+        <h1>Lesson 3: Links & Images</h1>
+    </header>
+
+    <main class="lesson-content">
+        <section class="intro">
+            <h2>Introduction</h2>
+            <p>Links and images are essential elements that make websites interactive and visually appealing. 
+               The <code>&lt;a&gt;</code> tag creates links to other pages or websites, while the 
+               <code>&lt;img&gt;</code> tag displays images.</p>
+            
+            <h3>Links - The &lt;a&gt; Tag</h3>
+            <p>Links use the <code>href</code> attribute to specify where they go:</p>
+            <pre>&lt;a href="https://example.com"&gt;Visit Example&lt;/a&gt;</pre>
+            <ul>
+                <li><strong>href:</strong> The destination URL or file path</li>
+                <li><strong>target="_blank":</strong> Opens link in a new tab</li>
+            </ul>
+
+            <h3>Images - The &lt;img&gt; Tag</h3>
+            <p>Images are self-closing tags with important attributes:</p>
+            <pre>&lt;img src="photo.jpg" alt="Description of photo" width="200"&gt;</pre>
+            <ul>
+                <li><strong>src:</strong> The image file path or URL</li>
+                <li><strong>alt:</strong> Alternative text for accessibility (required!)</li>
+                <li><strong>width/height:</strong> Control image size</li>
+            </ul>
+        </section>
+
+        <section class="quicklook-understanding">
+            <h2>Links & Images — Quick Look</h2>
+            <p>See how links and images work together in a simple example:</p>
+            <div class="editor-task-container">
+                <div class="editor-box">
+                    <div class="editor-label">HTML Code</div>
+                    <textarea disabled id="example">&lt;h1&gt;Welcome to My Page&lt;/h1&gt;
+&lt;img src="https://via.placeholder.com/150/007BFF/FFFFFF?text=Profile" alt="Profile picture" width="150"&gt;
+&lt;p&gt;Hello! I'm a web developer.&lt;/p&gt;
+&lt;p&gt;Visit my favorite sites:&lt;/p&gt;
+&lt;a href="https://www.google.com" target="_blank"&gt;Google&lt;/a&gt; | 
+&lt;a href="https://www.github.com"&gt;GitHub&lt;/a&gt;</textarea>
+                </div>
+                <div class="result-container">
+                    <div class="result-header">Result</div>
+                    <iframe class="preview-frame" src="lesson3_preview.html"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="understanding">
+            <h2>Understanding Paths</h2>
+            <p>There are two types of paths you can use:</p>
+            <div class="icons">
+                <div class="icon">
+                    <span class="em">🌐</span>
+                    <strong>Absolute Path</strong><br>
+                    Complete URL starting with http:// or https://
+                    <br><code>https://example.com/image.jpg</code>
+                </div>
+                <div class="icon">
+                    <span class="em">📁</span>
+                    <strong>Relative Path</strong><br>
+                    Path relative to your current file
+                    <br><code>images/photo.jpg</code> or <code>../photos/me.jpg</code>
+                </div>
+            </div>
+        </section>
+
+        <section class="task">
+            <h2>Your Task</h2>
+            <p>Create an "About Me" page that includes:</p>
+            <ul>
+                <li>A heading with your name (use <code>&lt;h1&gt;</code>)</li>
+                <li>A profile image with <code>alt</code> text (you can use a placeholder image)</li>
+                <li>A paragraph describing yourself</li>
+                <li>At least one link to your favorite website</li>
+            </ul>
+            <p><strong>Validation requirements:</strong> Must contain exactly 1 <code>&lt;img&gt;</code> tag with <code>alt</code> attribute and 1 <code>&lt;a&gt;</code> tag.</p>
+            
+            <div class="editor-task-container">
+                <div class="editor-box">
+                    <div class="editor-label">Your Code (editable)</div>
+                    <textarea id="code-editor" placeholder="Write your HTML code here..."></textarea>
+                </div>
+                <div class="result-container">
+                    <div class="result-header">Result</div>
+                    <iframe id="result-frame"></iframe>
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="check-answer">Check Answer</button>
+                <button id="show-hint">Show Hint</button>
+                <button id="next-lesson" disabled>Next Lesson</button>
+            </div>
+            <div id="feedback"></div>
+        </section>
+    </main>
+
+    <script src="lesson3.js"></script>
+    <script src="../lesson-navigation.js"></script>
+</body>
+</html>

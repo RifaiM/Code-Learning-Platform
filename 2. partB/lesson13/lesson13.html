@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lesson13.css">
+    <title>Lesson 13 - Forms & Validation</title>
+</head>
+<body>
+    <a href="../../1. partA/index.html" class="home-button" title="Back to PartA">🏠</a>
+    <header class="lesson-header">
+        <h1>Lesson 13: Forms & Validation</h1>
+    </header>
+
+    <main class="lesson-content">
+        <section class="intro">
+            <h2>Introduction</h2>
+            <p>Form validation is the process of checking user input to ensure it meets specific requirements before submission. JavaScript form validation provides immediate feedback to users, improving the user experience by catching errors before data is sent to the server.</p>
+            
+            <h3>Core Form Validation Concepts</h3>
+            <div class="form-diagram">
+                <div class="form-demo">
+                    <div class="demo-container">
+                        <div class="form-concept input-capture">
+                            <div class="concept-label">Input Capture</div>
+                            <span class="concept-desc">Get values from form fields</span>
+                        </div>
+                        <div class="form-concept validation-check">
+                            <div class="concept-label">Validation Check</div>
+                            <span class="concept-desc">Test input against rules</span>
+                        </div>
+                        <div class="form-concept feedback-display">
+                            <div class="concept-label">User Feedback</div>
+                            <span class="concept-desc">Show errors or success</span>
+                        </div>
+                        <div class="form-concept submit-control">
+                            <div class="concept-label">Submit Control</div>
+                            <span class="concept-desc">Allow or prevent submission</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>Form Validation Fundamentals</h3>
+            <div class="form-components">
+                <div class="component">
+                    <h4>📝 Input Value Access</h4>
+                    <p>Get user input from form fields</p>
+                    <code>input.value</code>
+                </div>
+                
+                <div class="component">
+                    <h4>✅ Validation Logic</h4>
+                    <p>Check if input meets requirements</p>
+                    <code>if (input.value.length > 0) { ... }</code>
+                </div>
+
+                <div class="component">
+                    <h4>🚫 Prevent Submission</h4>
+                    <p>Stop form from submitting on errors</p>
+                    <code>event.preventDefault()</code>
+                </div>
+
+                <div class="component">
+                    <h4>💬 User Feedback</h4>
+                    <p>Display validation messages to users</p>
+                    <code>errorElement.innerHTML = "Error message"</code>
+                </div>
+            </div>
+        </section>
+
+        <section class="understanding">
+            <h2>Understanding Forms & Validation</h2>
+            <p>Learn how to capture user input and validate it before form submission:</p>
+            
+            <h3>Form Validation Concepts Explained</h3>
+            <div class="form-explanations">
+                <div class="form-explanation">
+                    <h4>📝 Input Value Capture with .value</h4>
+                    <div class="explanation-content">
+                        <div class="explanation-text">
+                            <p><code>.value</code> property gets the current content of form input elements like text fields, textareas, and select dropdowns.</p>
+                            <pre>// HTML: &lt;input type="text" id="username"&gt;
+// JavaScript: Get the input value
+let usernameInput = document.getElementById("username");
+let inputValue = usernameInput.value;
+console.log("User entered:", inputValue);</pre>
+                        </div>
+                        <div class="visual-demo input-demo">
+                            <div class="input-structure">
+                                <div class="form-element">
+                                    <div class="input-field">
+                                        <span class="field-label">Input Field:</span>
+                                        <span class="field-value">"john_doe"</span>
+                                    </div>
+                                    <div class="capture-arrow">↓</div>
+                                    <div class="js-capture">
+                                        <span class="js-code">input.value = "john_doe"</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-explanation">
+                    <h4>✅ Validation Logic with Conditions</h4>
+                    <div class="explanation-content">
+                        <div class="explanation-text">
+                            <p>Use JavaScript conditions to check if input meets requirements like minimum length, format, or required fields.</p>
+                            <pre>// Check if input is not empty
+if (usernameInput.value.length === 0) {
+    alert("Username is required!");
+    return false;
+}
+
+// Check minimum length
+if (usernameInput.value.length < 3) {
+    alert("Username must be at least 3 characters!");
+    return false;
+}</pre>
+                        </div>
+                        <div class="visual-demo validation-demo">
+                            <div class="validation-flow">
+                                <div class="validation-step">
+                                    <span class="step-label">Input:</span>
+                                    <div class="demo-input">"ab"</div>
+                                </div>
+                                <div class="validation-arrow">→</div>
+                                <div class="validation-step">
+                                    <span class="step-label">Check:</span>
+                                    <div class="demo-check">length < 3?</div>
+                                </div>
+                                <div class="validation-arrow">→</div>
+                                <div class="validation-step">
+                                    <span class="step-label">Result:</span>
+                                    <div class="demo-result error">❌ Too Short</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-explanation">
+                    <h4>🚫 Prevent Submission with preventDefault</h4>
+                    <div class="explanation-content">
+                        <div class="explanation-text">
+                            <p><code>event.preventDefault()</code> stops the form from submitting when validation fails, keeping users on the page to fix errors.</p>
+                            <pre>// HTML: &lt;form id="myForm" onsubmit="return validateForm(event)"&gt;
+// JavaScript: Prevent submission on validation failure
+function validateForm(event) {
+    let input = document.getElementById("username");
+    if (input.value.length === 0) {
+        event.preventDefault(); // Stop form submission
+        alert("Please fill in the username!");
+        return false;
+    }
+    return true;
+}</pre>
+                        </div>
+                        <div class="visual-demo prevent-demo">
+                            <div class="submission-flow">
+                                <div class="flow-step">
+                                    <div class="demo-form">📋 Form</div>
+                                    <div class="submit-attempt">Submit Clicked</div>
+                                </div>
+                                <div class="prevent-arrow">🛑</div>
+                                <div class="flow-step">
+                                    <div class="prevent-action">preventDefault()</div>
+                                    <div class="stay-message">Stay on Page</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-explanation">
+                    <h4>💬 User Feedback Display</h4>
+                    <div class="explanation-content">
+                        <div class="explanation-text">
+                            <p>Show specific error messages or success feedback to guide users in fixing their input.</p>
+                            <pre>// Display validation feedback
+function showFeedback(message, isError) {
+    let feedbackElement = document.getElementById("feedback");
+    feedbackElement.innerHTML = message;
+    
+    if (isError) {
+        feedbackElement.style.color = "red";
+    } else {
+        feedbackElement.style.color = "green";
+    }
+}</pre>
+                        </div>
+                        <div class="visual-demo feedback-demo">
+                            <div class="feedback-timeline">
+                                <div class="time-step">
+                                    <span class="time-label">Invalid Input</span>
+                                    <div class="demo-message error-msg">❌ Username required</div>
+                                </div>
+                                <div class="time-step">
+                                    <span class="time-label">Valid Input</span>
+                                    <div class="demo-message success-msg">✅ Username is valid</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Common Use Cases</h3>
+            <div class="use-cases">
+                <div class="use-case">
+                    <div class="use-case-icon">👤</div>
+                    <div class="use-case-content">
+                        <h4>User Registration</h4>
+                        <p>Validate usernames, emails, passwords, and confirm passwords before account creation.</p>
+                    </div>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-icon">📧</div>
+                    <div class="use-case-content">
+                        <h4>Contact Forms</h4>
+                        <p>Ensure name, email, and message fields are filled with valid information.</p>
+                    </div>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-icon">💳</div>
+                    <div class="use-case-content">
+                        <h4>Payment Forms</h4>
+                        <p>Validate credit card numbers, expiry dates, and billing information.</p>
+                    </div>
+                </div>
+                
+                <div class="use-case">
+                    <div class="use-case-icon">🔍</div>
+                    <div class="use-case-content">
+                        <h4>Search Forms</h4>
+                        <p>Check that search queries aren't empty and meet minimum length requirements.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="structure-visual">
+                <h4>✅ Good Form Validation Practice:</h4>
+                <pre class="correct">// Clear form structure and validation
+&lt;form id="registrationForm"&gt;
+    &lt;input type="text" id="username" placeholder="Username"&gt;
+    &lt;button type="submit"&gt;Register&lt;/button&gt;
+    &lt;div id="errorMessage"&gt;&lt;/div&gt;
+&lt;/form&gt;
+
+// JavaScript with proper validation
+document.getElementById("registrationForm").onsubmit = function(event) {
+    let usernameInput = document.getElementById("username");
+    let errorDiv = document.getElementById("errorMessage");
+    
+    // Clear previous errors
+    errorDiv.innerHTML = "";
+    
+    // Validate username
+    if (usernameInput.value.trim().length === 0) {
+        errorDiv.innerHTML = "Username is required!";
+        event.preventDefault();
+        return false;
+    }
+    
+    if (usernameInput.value.length < 3) {
+        errorDiv.innerHTML = "Username must be at least 3 characters!";
+        event.preventDefault();
+        return false;
+    }
+    
+    // Success
+    errorDiv.innerHTML = "✅ Username is valid!";
+    errorDiv.style.color = "green";
+    return true;
+};</pre>
+                
+                <h4>❌ Poor Form Validation Practice:</h4>
+                <pre class="incorrect">// No validation or unclear structure
+&lt;form&gt;
+    &lt;input type="text" id="u"&gt;
+    &lt;button&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+
+// JavaScript with no validation
+document.querySelector("form").onsubmit = function() {
+    // No validation - form always submits
+    return true;
+};</pre>
+                <p class="error-note">⚠️ Always validate user input and provide clear error messages!</p>
+            </div>
+        </section>
+
+        <section class="task">
+            <h2>Your Task</h2>
+            <p>Create a form with JavaScript validation that prevents empty submission. Your code should include:</p>
+            <ul>
+                <li><strong>HTML form structure</strong> with at least one input field and a submit button</li>
+                <li><strong>Unique ID attributes</strong> for the form, input, and feedback elements</li>
+                <li><strong>JavaScript that uses .value</strong> to get input content</li>
+                <li><strong>Form submission handler</strong> that checks for empty input</li>
+                <li><strong>event.preventDefault()</strong> to stop submission when input is empty</li>
+                <li><strong>User feedback</strong> showing error or success messages</li>
+                <li>The form should not submit if the input is empty</li>
+            </ul>
+            <p><strong>Validation requirements:</strong> Must use <code>.value</code>, prevent empty submission, and show user feedback.</p>
+            
+            <div class="editor-task-container">
+                <div class="editor-box">
+                    <div class="editor-label">Your HTML & JavaScript Code (editable)</div>
+                    <textarea id="code-editor" 
+                    placeholder="Hint: Create a form with an input field and submit button. 
+Use JavaScript to validate the input and prevent empty submission.
+
+Example structure:
+
+<html>
+<head>
+    <title>Form Validation</title>
+</head>
+<body>
+    <form id='myForm'>
+        <input type='text' id='username' placeholder='Enter username'>
+        <button type='submit'>Submit</button>
+        <div id='feedback'></div>
+    </form>
+
+    <script>
+    document.getElementById('myForm').onsubmit = function(event) {
+        let input = document.getElementById('username');
+        let feedback = document.getElementById('feedback');
+        
+        if (input.value.trim().length === 0) {
+            event.preventDefault();
+            feedback.innerHTML = 'Please enter a username!';
+            feedback.style.color = 'red';
+            return false;
+        }
+        
+        feedback.innerHTML = 'Valid input!';
+        feedback.style.color = 'green';
+        return true;
+    };
+    </script>
+</body>
+</html>"></textarea>
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="check-answer">Check Answer</button>
+                <button id="show-hint">Show Hint</button>
+                <button id="next-lesson" disabled>Next Lesson</button>
+            </div>
+            <div id="feedback"></div>
+        </section>
+    </main>
+
+    <script src="lesson13.js"></script>
+    <script src="../lesson-navigation.js"></script>
+</body>
+</html>

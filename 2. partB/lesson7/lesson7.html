@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 7 - Box Model</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lesson7.css">
+</head>
+<body>
+    <a href="../../1. partA/index.html" class="home-button" title="Back to PartA">🏠</a>
+    <header class="lesson-header">
+        <h1>Lesson 7: Box Model</h1>
+    </header>
+
+    <main class="lesson-content">
+        <section class="intro">
+            <h2>Introduction</h2>
+            <p>The CSS Box Model is fundamental to understanding how elements are sized and spaced on a webpage. 
+               Every HTML element is essentially a rectangular box, and the box model defines how the different parts of this box work together.</p>
+            
+            <h3>Box Model Components</h3>
+            <div class="box-model-diagram">
+                <div class="box-demo">
+                    <div class="margin-area">
+                        <div class="margin-label">Margin</div>
+                        <div class="border-area">
+                            <div class="border-label">Border</div>
+                            <div class="padding-area">
+                                <div class="padding-label">Padding</div>
+                                <div class="content-area">
+                                    <div class="content-label">Content</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3>The Four Layers</h3>
+            <div class="box-components">
+                <div class="component">
+                    <h4>📦 Content</h4>
+                    <p>The actual content of the element (text, images, etc.)</p>
+                    <code>width: 200px; height: 100px;</code>
+                </div>
+                
+                <div class="component">
+                    <h4>🛡️ Padding</h4>
+                    <p>Space between content and border (inside the element)</p>
+                    <code>padding: 20px;</code>
+                </div>
+
+                <div class="component">
+                    <h4>🖼️ Border</h4>
+                    <p>Line around the padding and content</p>
+                    <code>border: 2px solid #007BFF;</code>
+                </div>
+
+                <div class="component">
+                    <h4>🌌 Margin</h4>
+                    <p>Space outside the border (between elements)</p>
+                    <code>margin: 15px;</code>
+                </div>
+            </div>
+        </section>
+
+        <section class="quicklook-understanding">
+            <h2>Box Model — Quick Look</h2>
+            <p>See how margin, border, and padding affect element spacing:</p>
+            <div class="editor-task-container">
+                <div class="editor-box">
+                    <div class="editor-label">CSS Box Model Code</div>
+                    <textarea disabled id="example">.box1 {
+  width: 200px;
+  height: 100px;
+  background: #e3f2fd;
+  margin: 20px;
+  padding: 15px;
+  border: 3px solid #007BFF;
+}
+
+.box2 {
+  width: 200px;
+  height: 100px;
+  background: #fff3cd;
+  margin: 10px 30px;
+  padding: 20px 10px;
+  border: 2px dashed #ffc107;
+}
+
+.box3 {
+  width: 200px;
+  height: 100px;
+  background: #d5f4e6;
+  margin: 25px auto;
+  padding: 12px;
+  border: 4px solid #27ae60;
+  border-radius: 8px;
+}</textarea>
+                </div>
+                <div class="result-container">
+                    <div class="result-header">Result</div>
+                    <iframe class="preview-frame" src="lesson7_preview.html"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="understanding">
+            <h2>Understanding Box Model Properties</h2>
+            <p>Learn how to control spacing and sizing with box model properties:</p>
+            
+            <h3>Margin Properties</h3>
+            <div class="property-examples">
+                <div class="property-demo">
+                    <h4>🌌 Margin Variations</h4>
+                    <pre>margin: 20px;           /* All sides */
+margin: 10px 20px;       /* Top/bottom, Left/right */
+margin: 5px 10px 15px;   /* Top, Left/right, Bottom */
+margin: 5px 10px 15px 20px; /* Top, Right, Bottom, Left */
+
+margin-top: 10px;
+margin-right: 15px;
+margin-bottom: 20px;
+margin-left: 25px;</pre>
+                </div>
+                
+                <div class="property-demo">
+                    <h4>🛡️ Padding Variations</h4>
+                    <pre>padding: 15px;          /* All sides */
+padding: 10px 20px;      /* Top/bottom, Left/right */
+padding: 5px 10px 15px;  /* Top, Left/right, Bottom */
+padding: 5px 10px 15px 20px; /* Top, Right, Bottom, Left */
+
+padding-top: 10px;
+padding-right: 15px;
+padding-bottom: 20px;
+padding-left: 25px;</pre>
+                </div>
+            </div>
+
+            <h3>Border Properties</h3>
+            <div class="border-examples">
+                <div class="border-demo solid-border">
+                    <strong>Solid Border</strong>
+                    <code>border: 2px solid #007BFF;</code>
+                </div>
+                <div class="border-demo dashed-border">
+                    <strong>Dashed Border</strong>
+                    <code>border: 3px dashed #28a745;</code>
+                </div>
+                <div class="border-demo dotted-border">
+                    <strong>Dotted Border</strong>
+                    <code>border: 4px dotted #dc3545;</code>
+                </div>
+                <div class="border-demo rounded-border">
+                    <strong>Rounded Border</strong>
+                    <code>border: 2px solid #6f42c1;<br>border-radius: 10px;</code>
+                </div>
+            </div>
+            
+            <div class="icons">
+                <div class="icon">
+                    <span class="em">📏</span>
+                    <strong>Precise Control</strong><br>
+                    Control exact spacing between elements
+                </div>
+                <div class="icon">
+                    <span class="em">🎯</span>
+                    <strong>Layout Foundation</strong><br>
+                    Essential for creating proper layouts
+                </div>
+                <div class="icon">
+                    <span class="em">🔧</span>
+                    <strong>Flexible Sizing</strong><br>
+                    Different values for each side
+                </div>
+                <div class="icon">
+                    <span class="em">✨</span>
+                    <strong>Visual Appeal</strong><br>
+                    Borders add style and definition
+                </div>
+            </div>
+            
+            <div class="structure-visual">
+                <h4>✅ Good Box Model Practice:</h4>
+                <pre class="correct">/* Clear, consistent spacing */
+.card {
+  width: 300px;
+  padding: 20px;
+  margin: 15px auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.button {
+  padding: 10px 20px;
+  margin: 10px 0;
+  border: 2px solid #007BFF;
+}</pre>
+                
+                <h4>❌ Poor Box Model Practice:</h4>
+                <pre class="incorrect">/* Inconsistent, hard to maintain */
+.element {
+  width: 287px; /* accounting for padding manually */
+  padding-top: 15px;
+  padding-right: 23px;
+  padding-bottom: 8px;
+  padding-left: 19px;
+}</pre>
+                <p class="error-note">⚠️ Let CSS handle the math - use consistent values!</p>
+            </div>
+        </section>
+
+        <section class="task">
+            <h2>Your Task</h2>
+            <p>Create a webpage that demonstrates the CSS box model. Your page should include:</p>
+            <ul>
+                <li>At least <strong>3 different elements</strong> (divs, paragraphs, etc.)</li>
+                <li>Apply <code>margin</code> to create space between elements</li>
+                <li>Use <code>padding</code> to create space inside elements</li>
+                <li>Add <code>border</code> styling to elements</li>
+                <li>Use different margin/padding values for different elements</li>
+                <li>Include background colors to visualize the spacing</li>
+            </ul>
+            <p><strong>Validation requirements:</strong> Must use <code>margin</code>, <code>padding</code>, and <code>border</code> properties with proper CSS syntax.</p>
+            
+            <div class="editor-task-container">
+                <div class="editor-box">
+                    <div class="editor-label">Your Code (editable)</div>
+                    <textarea id="code-editor" placeholder="Write your HTML with CSS here...
+
+Hint: Create boxes with different margin, padding, and border styles.
+
+Example:
+<html>
+<head>
+  <style>
+    .box1 {
+      width: 200px;
+      height: 100px;
+      background: lightblue;
+      margin: 20px;
+      padding: 15px;
+      border: 2px solid blue;
+    }
+    .box2 {
+      width: 180px;
+      height: 80px;
+      background: lightgreen;
+      margin: 10px 30px;
+      padding: 20px;
+      border: 3px dashed green;
+    }
+  </style>
+</head>
+<body>
+  <div class='box1'>Box 1 with margin and padding</div>
+  <div class='box2'>Box 2 with different spacing</div>
+</body>
+</html>"></textarea>
+                </div>
+                <div class="result-container">
+                    <div class="result-header">Result</div>
+                    <iframe id="result-frame"></iframe>
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="check-answer">Check Answer</button>
+                <button id="show-hint">Show Hint</button>
+                <button id="next-lesson" disabled>Next Lesson</button>
+            </div>
+            <div id="feedback"></div>
+        </section>
+    </main>
+
+    <script src="lesson7.js"></script>
+    <script src="../lesson-navigation.js"></script>
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 6 - CSS Basics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lesson6.css">
+</head>
+<body>
+    <a href="../../1. partA/index.html" class="home-button" title="Back to PartA">🏠</a>
+    <header class="lesson-header">
+        <h1>Lesson 6: CSS Basics</h1>
+    </header>
+
+    <main class="lesson-content">
+        <section class="intro">
+            <h2>Introduction</h2>
+            <p>CSS (Cascading Style Sheets) is the language that controls how HTML elements look on a webpage. 
+               While HTML provides the structure and content, CSS handles the visual presentation - colors, fonts, spacing, and layout.</p>
+            
+            <h3>CSS Syntax</h3>
+            <div class="syntax-example">
+                <pre>selector {
+  property: value;
+  property: value;
+}</pre>
+            </div>
+            
+            <h3>Ways to Include CSS</h3>
+            <div class="css-types">
+                <div class="css-example">
+                    <h4>🎨 External CSS (Recommended)</h4>
+                    <p>Separate CSS file linked to HTML:</p>
+                    <pre>&lt;head&gt;
+  &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;</pre>
+                    <div class="benefit">✓ Best for multiple pages</div>
+                </div>
+                
+                <div class="css-example">
+                    <h4>📝 Internal CSS</h4>
+                    <p>CSS written inside HTML &lt;head&gt;:</p>
+                    <pre>&lt;head&gt;
+  &lt;style&gt;
+    h1 { color: blue; }
+  &lt;/style&gt;
+&lt;/head&gt;</pre>
+                    <div class="benefit">✓ Good for single pages</div>
+                </div>
+
+                <div class="css-example">
+                    <h4>⚡ Inline CSS (Avoid)</h4>
+                    <p>CSS applied directly to elements:</p>
+                    <pre>&lt;h1 style="color: blue;"&gt;Title&lt;/h1&gt;</pre>
+                    <div class="warning">⚠ Hard to maintain</div>
+                </div>
+            </div>
+
+            <h3>Common CSS Properties</h3>
+            <div class="properties-grid">
+                <div class="property-item">
+                    <strong>color</strong>
+                    <p>Text color</p>
+                    <code>color: #007BFF;</code>
+                </div>
+                <div class="property-item">
+                    <strong>background</strong>
+                    <p>Background color/image</p>
+                    <code>background: #f8f9ff;</code>
+                </div>
+                <div class="property-item">
+                    <strong>font-family</strong>
+                    <p>Font type</p>
+                    <code>font-family: Arial, sans-serif;</code>
+                </div>
+                <div class="property-item">
+                    <strong>font-size</strong>
+                    <p>Text size</p>
+                    <code>font-size: 16px;</code>
+                </div>
+            </div>
+        </section>
+
+        <section class="quicklook-understanding">
+            <h2>CSS Basics — Quick Look</h2>
+            <p>See how CSS transforms plain HTML into styled content:</p>
+            <div class="editor-task-container">
+                <div class="editor-box">
+                    <div class="editor-label">CSS Code</div>
+                    <textarea disabled id="example">h1 {
+  color: #007BFF;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  font-size: 2rem;
+}
+
+p {
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.highlight {
+  background: #fff3cd;
+  padding: 10px;
+  border-radius: 5px;
+  border-left: 4px solid #ffc107;
+}
+
+.button {
+  background: #28a745;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}</textarea>
+                </div>
+                <div class="result-container">
+                    <div class="result-header">Result</div>
+                    <iframe class="preview-frame" src="lesson6_preview.html"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="understanding">
+            <h2>Understanding CSS Selectors</h2>
+            <p>CSS selectors target specific HTML elements to apply styles:</p>
+            <div class="selector-types">
+                <div class="selector-example">
+                    <h4>🏷️ Element Selector</h4>
+                    <pre>h1 {
+  color: blue;
+}</pre>
+                    <p>Targets all &lt;h1&gt; elements</p>
+                </div>
+                
+                <div class="selector-example">
+                    <h4>🎯 Class Selector</h4>
+                    <pre>.highlight {
+  background: yellow;
+}</pre>
+                    <p>Targets elements with class="highlight"</p>
+                </div>
+                
+                <div class="selector-example">
+                    <h4>🆔 ID Selector</h4>
+                    <pre>#header {
+  font-size: 2rem;
+}</pre>
+                    <p>Targets element with id="header"</p>
+                </div>
+            </div>
+            
+            <div class="icons">
+                <div class="icon">
+                    <span class="em">🎨</span>
+                    <strong>Visual Appeal</strong><br>
+                    Transform plain HTML into beautiful designs
+                </div>
+                <div class="icon">
+                    <span class="em">🎯</span>
+                    <strong>Precise Control</strong><br>
+                    Target specific elements with selectors
+                </div>
+                <div class="icon">
+                    <span class="em">📱</span>
+                    <strong>Responsive Design</strong><br>
+                    Adapt layouts for different screen sizes
+                </div>
+                <div class="icon">
+                    <span class="em">🔄</span>
+                    <strong>Maintainability</strong><br>
+                    Separate content from presentation
+                </div>
+            </div>
+            
+            <div class="structure-visual">
+                <h4>✅ Good CSS Practice:</h4>
+                <pre class="correct">/* External stylesheet */
+h1 {
+  color: #2c3e50;
+  font-family: 'Arial', sans-serif;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}</pre>
+                
+                <h4>❌ Poor CSS Practice:</h4>
+                <pre class="incorrect">&lt;h1 style="color:#2c3e50;font-family:Arial"&gt;Title&lt;/h1&gt;
+&lt;div style="background:white;padding:20px;border-radius:8px"&gt;
+  Content here
+&lt;/div&gt;</pre>
+                <p class="error-note">⚠️ Inline styles are hard to maintain and reuse!</p>
+            </div>
+        </section>
+
+        <section class="task">
+            <h2>Your Task</h2>
+            <p>Create a styled webpage using CSS. Your page should include:</p>
+            <ul>
+                <li>Set the <code>color</code> property for at least one element</li>
+                <li>Apply a <code>font-family</code> to text elements</li>
+                <li>Use a <code>background</code> color or style</li>
+                <li>Include both element selectors (like <code>h1</code>) and class selectors (like <code>.highlight</code>)</li>
+                <li>Use proper CSS syntax with selectors, properties, and values</li>
+            </ul>
+            <p><strong>Validation requirements:</strong> Must contain <code>color</code>, <code>font-family</code>, and <code>background</code> properties with proper CSS syntax.</p>
+            
+            <div class="editor-task-container">
+                <div class="editor-box">
+                    <div class="editor-label">Your Code (editable)</div>
+                    <textarea id="code-editor" placeholder="Write your HTML with CSS here...
+
+Hint: Start with basic HTML structure, then add <style> tags in the head with your CSS rules.
+
+Example:
+<html>
+<head>
+  <style>
+    h1 { color: blue; }
+    .special { background: yellow; }
+  </style>
+</head>
+<body>
+  <h1>My Title</h1>
+  <p class='special'>Special paragraph</p>
+</body>
+</html>"></textarea>
+                </div>
+                <div class="result-container">
+                    <div class="result-header">Result</div>
+                    <iframe id="result-frame"></iframe>
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="check-answer">Check Answer</button>
+                <button id="show-hint">Show Hint</button>
+                <button id="next-lesson" disabled>Next Lesson</button>
+            </div>
+            <div id="feedback"></div>
+        </section>
+    </main>
+
+    <script src="lesson6.js"></script>
+    <script src="../lesson-navigation.js"></script>
+</body>
+</html>
