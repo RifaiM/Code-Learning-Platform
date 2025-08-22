@@ -174,7 +174,7 @@ document.getElementById('markReadBtn').addEventListener('click', function() {
     } catch (e) { }
 
     setTimeout(() => {
-    window.location.href = './#before-code';
+    window.location.href = 'https://rifaim.github.io/Code-Learning-Platform';
     }, 1500);
 });
 
@@ -232,5 +232,6 @@ document.addEventListener('DOMContentLoaded', function() {
 // Start auto demo after page loads (but disable it for now to avoid conflicts)
 
 // setTimeout(autoDemo, 3000);
+
 
 
