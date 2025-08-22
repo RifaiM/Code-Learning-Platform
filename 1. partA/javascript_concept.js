@@ -223,7 +223,7 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(() => {
                 celebration.remove();
                 // Redirect back to main page
-                window.location.href = '../../index.html#footer';
+                window.location.href = 'https://rifaim.github.io/Code-Learning-Platform';
             }, 2000);
         });
     }
@@ -254,4 +254,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 });
+
 
