@@ -56,7 +56,7 @@ document.getElementById('markReadBtn').addEventListener('click', function() {
 
     // Return to overview with delay for animation
     setTimeout(() => {
-    window.location.href = 'https://rifaim.github.io/Code-Learning-Platform';
+    window.location.href = '/index.html#before-code';
     }, 1500);
 });
 
@@ -89,11 +89,4 @@ style.textContent = `
     50% { transform: translateY(-5px); }
     }
 `;
-
 document.head.appendChild(style);
-
-
-
-
-
-
